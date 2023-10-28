@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "oblig2_Yevhen_Verkhalantsev.Database/1.0.0": {
+        "runtime": {
+          "oblig2_Yevhen_Verkhalantsev.Database.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "oblig2_Yevhen_Verkhalantsev.Database/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
