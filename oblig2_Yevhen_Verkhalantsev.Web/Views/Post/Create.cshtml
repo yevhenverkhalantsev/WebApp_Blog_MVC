@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-md-4">
+        
+    </div>
+    
+    <div class="col-md-4">
+        <div class="bg-secondary rounded h-100 p-4">
+            <h6 class="mb-4">Post Form</h6>
+            
+            <div class="mb-3">
+                <label class="form-label">Title</label>
+                <input type="text" class="form-control" id="post-title">
+            </div>
+            
+            <button id="btnCreate" type="button" style="margin-bottom: 10px" class="btn btn-primary">Create</button>
+            
+            <div id="create-success-label" class="alert alert-success d-none">
+                Created successfully!
+            </div>
+            <div id="create-error-label" class="alert alert-danger d-none">
+                Error on created!
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        $("#btnCreate").on('click', ()=>{
+            let data = {
+                Title: $("#post-title").val(),
+            }
+            
+            let jsonData = JSON.stringify(data)
+            
+            $("#create-success-label").addClass("d-none")
+            $("#create-error-label").addClass("d-none")
+            
+            $.ajax({
+                url:'@Url.Action("Create", "Post")', 
+                method: 'post',
+                data: jsonData,
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
+                success:(response)=>{
+                    $("#create-success-label").removeClass("d-none")
+                    setTimeout(()=>{
+                      $("#create-success-label").addClass("d-none")  
+                    }, 3000)
+                    $("#post-title").val("")
+                },
+                error:(response)=>{
+                    $("#create-error-label").removeClass("d-none")
+                }
+            })
+        })
+    </script>
+
+}

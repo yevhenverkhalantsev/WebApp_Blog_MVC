@@ -2,17 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using oblig2_Yevhen_Verkhalantsev.Web.Models;
 
-namespace oblig2_Yevhen_Verkhalantsev.Web.Controllers;
+namespace oblig1_Yevhen_Verkhalantsev.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
-
     public IActionResult Index()
     {
         return View();

@@ -1,11 +1,17 @@
 using Microsoft.EntityFrameworkCore;
 using oblig2_Yevhen_Verkhalantsev.EntityFramework;
+using oblig2_Yevhen_Verkhalantsev.EntityFramework.Repository;
+using oblig2_Yevhen_Verkhalantsev.Services.AuthServices;
+using oblig2_Yevhen_Verkhalantsev.Services.UserServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(x => x.UseSqlite("Data Source=559536.db"));
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IAuthService, AuthService>();
 
 var app = builder.Build();
 

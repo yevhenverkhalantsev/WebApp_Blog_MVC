@@ -113,19 +113,7 @@
               "target": "Package",
               "version": "[7.0.13, )"
             },
-            "SQLite": {
-              "target": "Package",
-              "version": "[3.13.0, )"
-            },
             "SQLitePCLRaw.bundle_e_sqlite3": {
-              "target": "Package",
-              "version": "[2.1.6, )"
-            },
-            "SQLitePCLRaw.core": {
-              "target": "Package",
-              "version": "[2.1.6, )"
-            },
-            "SQLitePCLRaw.lib.e_sqlite3": {
               "target": "Package",
               "version": "[2.1.6, )"
             }

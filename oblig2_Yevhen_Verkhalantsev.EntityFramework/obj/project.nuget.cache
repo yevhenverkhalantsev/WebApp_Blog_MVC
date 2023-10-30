@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yhozsU+U9+jShMVU33U0lvyg55vunZxv0AsR+VbEoUbcxtQTYiv9cRlmZkCIlBjT9fYgKALJpg1/qsyajvl2Ig==",
+  "dgSpecHash": "yMT8ksD9Xqg8L/cmkqSc07z1icFXM/NREmNmhbDD7eQQMGVPmNXaYjpydQs/UhGV0lP8K68bofloPxXyWNfBRg==",
   "success": true,
   "projectFilePath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.EntityFramework/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj",
   "expectedPackageFiles": [
@@ -24,7 +24,6 @@
     "/Users/yevhenverkhalantsev/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/Users/yevhenverkhalantsev/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "/Users/yevhenverkhalantsev/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
-    "/Users/yevhenverkhalantsev/.nuget/packages/sqlite/3.13.0/sqlite.3.13.0.nupkg.sha512",
     "/Users/yevhenverkhalantsev/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.6/sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
     "/Users/yevhenverkhalantsev/.nuget/packages/sqlitepclraw.core/2.1.6/sqlitepclraw.core.2.1.6.nupkg.sha512",
     "/Users/yevhenverkhalantsev/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.6/sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",

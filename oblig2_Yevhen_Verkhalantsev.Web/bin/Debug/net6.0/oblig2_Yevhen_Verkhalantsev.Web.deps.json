@@ -9,7 +9,8 @@
       "oblig2_Yevhen_Verkhalantsev.Web/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "7.0.13",
-          "oblig2_Yevhen_Verkhalantsev.EntityFramework": "1.0.0"
+          "oblig2_Yevhen_Verkhalantsev.EntityFramework": "1.0.0",
+          "oblig2_Yevhen_Verkhalantsev.Services": "1.0.0"
         },
         "runtime": {
           "oblig2_Yevhen_Verkhalantsev.Web.dll": {}
@@ -221,30 +222,6 @@
           }
         }
       },
-      "SQLite/3.13.0": {
-        "runtimeTargets": {
-          "runtimes/linux-x64/native/libsqlite3.so": {
-            "rid": "linux-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/osx-x64/native/libsqlite3.dylib": {
-            "rid": "osx-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/win7-x64/native/sqlite3.dll": {
-            "rid": "win7-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/win7-x86/native/sqlite3.dll": {
-            "rid": "win7-x86",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
         "dependencies": {
           "SQLitePCLRaw.lib.e_sqlite3": "2.1.6",
@@ -434,14 +411,19 @@
           "Microsoft.Data.Sqlite.Core": "7.0.13",
           "Microsoft.EntityFrameworkCore": "7.0.13",
           "Microsoft.EntityFrameworkCore.Sqlite.Core": "7.0.13",
-          "SQLite": "3.13.0",
           "SQLitePCLRaw.bundle_e_sqlite3": "2.1.6",
-          "SQLitePCLRaw.core": "2.1.6",
-          "SQLitePCLRaw.lib.e_sqlite3": "2.1.6",
           "oblig2_Yevhen_Verkhalantsev.Database": "1.0.0"
         },
         "runtime": {
           "oblig2_Yevhen_Verkhalantsev.EntityFramework.dll": {}
+        }
+      },
+      "oblig2_Yevhen_Verkhalantsev.Services/1.0.0": {
+        "dependencies": {
+          "oblig2_Yevhen_Verkhalantsev.EntityFramework": "1.0.0"
+        },
+        "runtime": {
+          "oblig2_Yevhen_Verkhalantsev.Services.dll": {}
         }
       }
     }
@@ -585,13 +567,6 @@
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
     },
-    "SQLite/3.13.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-MJfRiz2p6aMVOxrxGMdVzhpzI0oxTgZSwC8eVuOpV8L7yYaFUu8q/OFYwv9P0/aZ/pdEu24O6gma6wZJMTun9A==",
-      "path": "sqlite/3.13.0",
-      "hashPath": "sqlite.3.13.0.nupkg.sha512"
-    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
       "type": "package",
       "serviceable": true,
@@ -661,6 +636,11 @@
       "sha512": ""
     },
     "oblig2_Yevhen_Verkhalantsev.EntityFramework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "oblig2_Yevhen_Verkhalantsev.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

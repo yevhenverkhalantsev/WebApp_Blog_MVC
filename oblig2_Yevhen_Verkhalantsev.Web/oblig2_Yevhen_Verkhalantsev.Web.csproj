@@ -15,6 +15,14 @@
 
     <ItemGroup>
       <ProjectReference Include="..\oblig2_Yevhen_Verkhalantsev.EntityFramework\oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj" />
+      <ProjectReference Include="..\oblig2_Yevhen_Verkhalantsev.Services\oblig2_Yevhen_Verkhalantsev.Services.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Models\Blog\" />
+      <Folder Include="Models\Comment\" />
+      <Folder Include="Models\Post\" />
+      <Folder Include="Models\User\" />
     </ItemGroup>
 
 </Project>
