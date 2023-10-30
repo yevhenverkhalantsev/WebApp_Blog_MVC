@@ -7,13 +7,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="BlogServices\" />
+      <Folder Include="AuthServices\Models\" />
       <Folder Include="CommentServices\" />
-      <Folder Include="PostServices\" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\oblig2_Yevhen_Verkhalantsev.EntityFramework\oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="11.8.0" />
+      <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     </ItemGroup>
 
 </Project>

@@ -21,8 +21,8 @@
     <ItemGroup>
       <Folder Include="Models\Blog\" />
       <Folder Include="Models\Comment\" />
-      <Folder Include="Models\Post\" />
       <Folder Include="Models\User\" />
+      <Folder Include="Views\User\" />
     </ItemGroup>
 
 </Project>

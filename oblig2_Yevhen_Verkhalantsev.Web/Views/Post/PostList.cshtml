@@ -1,0 +1,36 @@
+@using oblig2_Yevhen_Verkhalantsev.Database
+
+<div class="container">
+    <table class="table table-dark table-hover">
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Blog</th>
+        </tr>
+        
+        @foreach (PostEntity post in Model.Posts)
+        {
+            <tr id="post-@post.Id" style="cursor: pointer">
+                <td>@post.Id</td>
+                <td>@post.Title</td>
+                <td>@post.Content</td>
+                <td>@post.Blog.Title</td>
+            </tr>
+        }
+    </table>
+</div>
+
+@section Scripts
+{
+    <script>
+        let posts = document.querySelectorAll("[id^='post-']")
+        posts.forEach(post=>{
+            post.addEventListener("click", ()=>{
+                let idParts = post.id.split("-")
+                let postId = idParts[idParts.length - 1]
+                location.href = "@Url.Action("Update","Post")?id=" + postId
+            })
+        })
+    </script>
+}

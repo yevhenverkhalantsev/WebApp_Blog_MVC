@@ -76,3 +76,7 @@
 /Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll
 /Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll
 /Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb
+/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/FluentValidation.dll
+/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
+/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.MvcApplicationPartsAssemblyInfo.cs

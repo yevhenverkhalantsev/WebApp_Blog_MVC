@@ -10,97 +10,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="860ecc27-7829-422c-a7bd-d32fb78f833f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/Migrations/20231028172019_testMigration.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/Migrations/20231028172019_testMigration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/Repository/GenericRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/Repository/IGenericRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/AuthServices/AuthService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/AuthServices/IAuthService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/Response/ResponseService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/UserServices/IUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/UserServices/Models/CreateUserHttpPostModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/UserServices/Models/DeleteUserHttpPostModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/UserServices/Models/UpdateUserHttpPostModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/UserServices/UserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Database.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Database.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/refint/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/BlogController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/CommentController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/PostController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/UserController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Blog/BlogList.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Blog/Create.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Comment/CommentList.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Comment/Create.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Comment/Update.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Post/Create.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Post/CreateList.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Post/Update.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/User/Auth.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/BlogServices/BlogService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/BlogServices/IBlogService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/BlogServices/Models/CreateBlogHttpPostModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/PostServices/IPostService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/PostServices/Models/CreatePostHttpPostModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/PostServices/Models/DeletePostHttpPostModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/PostServices/Models/UpdatePostHttpPostModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/PostServices/PostService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/UserServices/CurrentUserContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/UserServices/ICurrentUserContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db-shm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/AuthController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Models/Post/CreatePostHttpGetViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Models/Post/PostListHttpGetViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Models/Post/UpdatePostHttpGetViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Auth/LogIn.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Auth/SignUp.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Post/PostList.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/FluentValidation.AspNetCore.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/FluentValidation.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/dataSources/3c3ae549-aac9-4890-a697-6aca6d865c95.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/dataSources/3c3ae549-aac9-4890-a697-6aca6d865c95.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/dataSources/66089859-8b79-4a65-ab4d-80453a724012.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/dataSources/66089859-8b79-4a65-ab4d-80453a724012/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/efCoreDialogsState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/efCoreDialogsState.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/dataSources/3c3ae549-aac9-4890-a697-6aca6d865c95/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/dataSources/3c3ae549-aac9-4890-a697-6aca6d865c95/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Database/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Database/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Database/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Database/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.EntityFramework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.EntityFramework.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/Debug/net6.0/refint/oblig2_Yevhen_Verkhalantsev.EntityFramework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/Debug/net6.0/refint/oblig2_Yevhen_Verkhalantsev.EntityFramework.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.EntityFramework/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/AuthServices/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/AuthServices/AuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/refint/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/refint/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/oblig2_Yevhen_Verkhalantsev.Services.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/oblig2_Yevhen_Verkhalantsev.Services.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/oblig2_Yevhen_Verkhalantsev.Services.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/oblig2_Yevhen_Verkhalantsev.Services.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/oblig2_Yevhen_Verkhalantsev.Services.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/oblig2_Yevhen_Verkhalantsev.Services.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/oblig2_Yevhen_Verkhalantsev.Services.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/oblig2_Yevhen_Verkhalantsev.Services.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/BlogController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/BlogController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/PostController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/PostController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Blog/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Blog/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Post/CreateList.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.EntityFramework.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/User/Auth.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.staticwebassets.runtime.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/runtimes/linux-x64/native/libsqlite3.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/runtimes/osx-x64/native/libsqlite3.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/runtimes/win7-x64/native/sqlite3.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/runtimes/win7-x86/native/sqlite3.dll" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.csproj.AssemblyReference.cache" afterDir="false" />
@@ -110,12 +78,9 @@
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/refint/oblig2_Yevhen_Verkhalantsev.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/refint/oblig2_Yevhen_Verkhalantsev.Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/staticwebassets.build.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/staticwebassets.development.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/oblig2_Yevhen_Verkhalantsev.Web.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/oblig2_Yevhen_Verkhalantsev.Web.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/staticwebassets.pack.sentinel" afterDir="false" />
@@ -165,32 +130,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "RiderAspCSFileTemplatesSettingsId",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ],
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/yevhenverkhalantsev/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/yevhenverkhalantsev/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
-      &quot;/Users/yevhenverkhalantsev/.local/share/Symbols/src&quot;
+    "rider.external.source.directories": [
+      "/Users/yevhenverkhalantsev/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
+      "/Users/yevhenverkhalantsev/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache",
+      "/Users/yevhenverkhalantsev/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.oblig2_Yevhen_Verkhalantsev.Web">
     <configuration name="oblig2_Yevhen_Verkhalantsev" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.csproj" />
@@ -262,6 +227,41 @@
       <workItem from="1698510612272" duration="3301000" />
       <workItem from="1698513968762" duration="287000" />
       <workItem from="1698514275511" duration="7685000" />
+      <workItem from="1698665462681" duration="1411000" />
+      <workItem from="1698669561500" duration="63000" />
+      <workItem from="1698669688221" duration="57000" />
+      <workItem from="1698669789806" duration="262000" />
+      <workItem from="1698670063564" duration="10000" />
+      <workItem from="1698670097203" duration="49000" />
+      <workItem from="1698670194833" duration="76000" />
+      <workItem from="1698670292360" duration="656000" />
+      <workItem from="1698670961382" duration="119000" />
+      <workItem from="1698671126234" duration="89000" />
+      <workItem from="1698671240151" duration="405000" />
+      <workItem from="1698671662090" duration="2771000" />
+      <workItem from="1698674467418" duration="51000" />
+      <workItem from="1698674533548" duration="599000" />
+      <workItem from="1698675165267" duration="43000" />
+      <workItem from="1698675217976" duration="51000" />
+      <workItem from="1698675285171" duration="22000" />
+      <workItem from="1698675314393" duration="24000" />
+      <workItem from="1698675352140" duration="7000" />
+      <workItem from="1698675363941" duration="272000" />
+      <workItem from="1698675664110" duration="100000" />
+      <workItem from="1698675798157" duration="157000" />
+      <workItem from="1698675973420" duration="39000" />
+      <workItem from="1698676183080" duration="100000" />
+      <workItem from="1698676296880" duration="199000" />
+      <workItem from="1698676524020" duration="281000" />
+      <workItem from="1698676831331" duration="54000" />
+      <workItem from="1698676901994" duration="366000" />
+      <workItem from="1698677298925" duration="86000" />
+      <workItem from="1698677390150" duration="117000" />
+      <workItem from="1698677534844" duration="30000" />
+      <workItem from="1698677584782" duration="339000" />
+      <workItem from="1698677942210" duration="3948000" />
+      <workItem from="1698681915859" duration="7231000" />
+      <workItem from="1698697279989" duration="404000" />
     </task>
     <task id="LOCAL−00001" summary="init commit">
       <option name="closed" value="true" />
@@ -277,7 +277,14 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1698498389154</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="basic setup ui, services, auth">
+      <option name="closed" value="true" />
+      <created>1698665549909</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1698665549909</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +306,65 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
+    <MESSAGE value="basic setup ui, services, auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic setup ui, services, auth" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/BlogController.cs</url>
+          <line>26</line>
+          <properties documentPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/BlogController.cs" initialLine="26" containingFunctionPresentation="Method 'Create'">
+            <startOffsets>
+              <option value="672" />
+            </startOffsets>
+            <endOffsets>
+              <option value="696" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/AuthController.cs</url>
+          <line>31</line>
+          <properties documentPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/AuthController.cs" initialLine="31" containingFunctionPresentation="Method 'LogIn'">
+            <startOffsets>
+              <option value="905" />
+            </startOffsets>
+            <endOffsets>
+              <option value="926" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/UserServices/CurrentUserContext.cs</url>
+          <line>50</line>
+          <properties documentPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/UserServices/CurrentUserContext.cs" initialLine="50" containingFunctionPresentation="Property 'IsAuthenticated'">
+            <startOffsets>
+              <option value="1234" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1322" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/AuthServices/AuthService.cs</url>
+          <line>31</line>
+          <properties documentPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/AuthServices/AuthService.cs" initialLine="31" containingFunctionPresentation="Method 'LogIn'">
+            <startOffsets>
+              <option value="1111" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1221" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

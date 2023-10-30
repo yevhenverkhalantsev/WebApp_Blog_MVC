@@ -1,0 +1,56 @@
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+<div class="container-fluid">
+    <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+            <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="index.html" class="">
+                        <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Blog</h3>
+                    </a>
+                    <h3>Log In</h3>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="username" placeholder="Username">
+                    <label for="username">Username</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <label for="password">Password</label>
+                </div>
+                
+                <input class="btn btn-primary py-3 w-100 mb-4" type="button" value="Log In" id="btn-login"/>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+    $("#btn-login").on("click", ()=> {
+        let data = {
+            Username: $("#username").val(),
+            Password: $("#password").val()
+        };
+        
+        let JSONData = JSON.stringify(data);
+        
+        $.ajax({
+            url:"@Url.Action("LogIn", "Auth")",
+            method: "POST",
+            data: JSONData,
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: (response)=>{
+                location.href = response.url;
+            },
+            error: (response)=>{
+                
+            }
+        
+        })
+
+    });
+    </script>
+}

@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using oblig2_Yevhen_Verkhalantsev.Services.UserServices
+@inject ICurrentUserContext currentUserContext
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -58,7 +61,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="@Url.Action("Create", "Post")">Create Post</a></li>
-            <li><a class="dropdown-item" href="@Url.Action()">Post List</a></li>
+            <li><a class="dropdown-item" href="@Url.Action("PostList", "Post")">Post List</a></li>
           </ul>
         </li>
 
@@ -76,14 +79,30 @@
     </div>
   </div>
   <div class="nav-item dropdown">
-      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-          <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-          <span class="d-none d-lg-inline-flex">John Doe</span>
-      </a>
+    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+      <img class="rounded-circle me-lg-2" src="~/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+      <span class="d-none d-lg-inline-flex">
+        @if (currentUserContext.IsAuthenticated)
+        {
+          @currentUserContext.Username
+        }
+
+      </span> 
+    </a>
+    @if (currentUserContext.IsAuthenticated)
+    {
       <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-          <a href="#" class="dropdown-item">Log Out</a>
+        <a href="#" class="dropdown-item">Log Out</a>
       </div>
-  </div>
+    }
+    else
+    {
+      <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+        <a href="@Url.Action("LogIn", "Auth")" class="dropdown-item">Log In</a>
+      </div>
+    }
+ 
+    </div>
 </nav>
 
 <div class="container-fluid position-relative p-0">
@@ -104,7 +123,7 @@
 <script src="~/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
 <!-- Template Javascript -->
-<script src="js/main.js"></script>
+@* <script src="~/js/main.js"></script> *@
 
 @await RenderSectionAsync("Scripts", required: false)
 

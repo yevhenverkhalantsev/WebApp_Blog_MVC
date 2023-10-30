@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "sw6YsYtZsXgvvG9/gqJL0aOU4hRpGoO2i9aCqWPJjHx4fjgs/DURCc+Q2aUW/EEVXsujve7gptyTWEzqx/Niaw==",
+  "dgSpecHash": "jhqjLD8eYCRvuTV63CuLlo8ZOckyUc3wBzqPnmgHK4cAlF6Q2hYk2OvSYlVLpPT3rJw1VoYu3cgjeSqUnkezJg==",
   "success": true,
   "projectFilePath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/oblig2_Yevhen_Verkhalantsev.Services.csproj",
   "expectedPackageFiles": [
+    "/Users/yevhenverkhalantsev/.nuget/packages/fluentvalidation/11.8.0/fluentvalidation.11.8.0.nupkg.sha512",
+    "/Users/yevhenverkhalantsev/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "/Users/yevhenverkhalantsev/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "/Users/yevhenverkhalantsev/.nuget/packages/microsoft.data.sqlite.core/7.0.13/microsoft.data.sqlite.core.7.0.13.nupkg.sha512",
     "/Users/yevhenverkhalantsev/.nuget/packages/microsoft.entityframeworkcore/7.0.13/microsoft.entityframeworkcore.7.0.13.nupkg.sha512",
     "/Users/yevhenverkhalantsev/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.13/microsoft.entityframeworkcore.abstractions.7.0.13.nupkg.sha512",

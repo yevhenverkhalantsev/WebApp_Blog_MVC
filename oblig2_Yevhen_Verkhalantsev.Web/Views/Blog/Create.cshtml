@@ -12,13 +12,6 @@
                 <input type="text" class="form-control" id="blog-name" style="margin-bottom: 10px">
                 <div class="alert alert-danger d-none" id="blog-name-error-label"></div>
             </div>
-            
-            <div class="mb-3">
-                <label class="form-label">CreatedAt</label>
-                <input type="date" class="form-control" id="blog-created-at" style="margin-bottom: 10px">
-                <div class="alert alert-danger d-none" id="blog-created-at-error-label"></div>
-            </div>
-            
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="isOpen">
                 <label class="form-check-label" for="exampleCheck1">Open Blog</label>
@@ -49,6 +42,9 @@
 
         let requestData = {
             Title: $("#blog-name").val(),
+           
+            // IsOpen: $("#isOpen").is(":checked")
+            
 
         }
         console.log(requestData)
