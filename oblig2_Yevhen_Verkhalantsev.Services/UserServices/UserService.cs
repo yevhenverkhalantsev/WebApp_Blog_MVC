@@ -79,4 +79,9 @@ public class UserService: IUserService
         return ResponseService<UserEntity>.Ok(user);
 
     }
+    
+    public async Task<ICollection<UserEntity>> GetAll()
+    {
+        return await _userRepository.GetAll().ToListAsync();
+    }
 }

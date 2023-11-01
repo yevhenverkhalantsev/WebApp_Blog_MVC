@@ -32,6 +32,8 @@ builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<IBlogService, BlogService>();
 builder.Services.AddTransient<IPostService, PostService>();
 
+builder.Services.AddHttpContextAccessor();
+
 
 var app = builder.Build();
 

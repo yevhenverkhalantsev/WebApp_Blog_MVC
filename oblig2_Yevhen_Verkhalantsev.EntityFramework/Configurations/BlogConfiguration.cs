@@ -12,6 +12,7 @@ public class BlogConfiguration: IEntityTypeConfiguration<BlogEntity>
         builder.HasKey(b => b.Id);
         builder.Property(b => b.Title).HasMaxLength(255).IsRequired();
         builder.Property(b => b.CreatedAt).IsRequired();
+        builder.Property(b => b.IsOpen);
         
         builder.HasOne(b => b.User)
             .WithMany(u => u.Blogs)

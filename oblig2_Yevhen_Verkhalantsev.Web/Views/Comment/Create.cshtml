@@ -1,3 +1,9 @@
+@using oblig2_Yevhen_Verkhalantsev.Database
+@using oblig2_Yevhen_Verkhalantsev.Services.UserServices
+@using oblig2_Yevhen_Verkhalantsev.Web.Models.Comment
+@model CreateCommentHttpGetViewModel
+@inject ICurrentUserContext CurrentUserContext
+
 <div class="row">
     <div class="col-md-4">
         
@@ -13,9 +19,26 @@
             </div>
             
             <div class="mb-3">
-                <label class="form-label">CreatedAt</label>
-                <input type="date" class="form-control" id="comment-created-at" style="margin-bottom: 10px">
-                <div class="alert alert-danger d-none" id="comment-created-at-error-label"></div>
+                <label class="form-label">Blog</label>
+                <select class="form-control" id="blog-name">
+                    @if (Model.Blogs.Count > 0)
+                    {
+                        foreach (BlogEntity blog in Model.Blogs)
+                        {
+                            if (blog.UserFk == CurrentUserContext.Id)
+                            {
+                                <option value="@blog.Id">
+                                    @blog.Title
+                                </option>
+                            }
+                        }
+                    }
+                    else
+                    {
+                        <option>No blogs available</option>
+                    }
+                </select>
+                <div class="alert alert-danger d-none" id="blog-name-error-label"></div>
             </div>
             
             <button id="btnCreate" type="button" style="margin-bottom: 10px" class="btn btn-primary">Create</button>
@@ -37,6 +60,7 @@
         $("#btnCreate").on('click', ()=>{
             let data = {
                 Content: $("#comment-content").val(),
+                BlogId: $("#blog-name").val()
             }
             
             let jsonData = JSON.stringify(data)

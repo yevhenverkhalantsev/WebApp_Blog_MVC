@@ -1,19 +1,23 @@
+using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using oblig2_Yevhen_Verkhalantsev.Services.BlogServices;
 using oblig2_Yevhen_Verkhalantsev.Services.BlogServices.Models;
-using oblig2_Yevhen_Verkhalantsev.Services.Response;
+using oblig2_Yevhen_Verkhalantsev.Services.UserServices;
+using oblig2_Yevhen_Verkhalantsev.Web.Models.Blog;
 
-namespace oblig1_Yevhen_Verkhalantsev.Controllers;
+namespace oblig2_Yevhen_Verkhalantsev.Web.Controllers;
 
 public class BlogController: Controller
 {
-    
     private readonly IBlogService _blogService;
+    private readonly IUserService _userService;
 
-    public BlogController(IBlogService blogService)
+    public BlogController(IBlogService blogService, IUserService userService)
     {
         _blogService = blogService;
+        _userService = userService;
     }
+
     
     [HttpGet]
     public async Task<IActionResult> Create()
@@ -28,7 +32,14 @@ public class BlogController: Controller
         {
             return BadRequest(ModelState);
         }
-        var response = await _blogService.Create(vm);
+        
+        var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (!long.TryParse(currentUserId, out long userId))
+        {
+            return BadRequest(new { errorMessage = "Invalid User ID" });
+        }
+
+        var response = await _blogService.Create(vm, userId);
         if (response.IsError)
         {
             return BadRequest(new
@@ -42,4 +53,28 @@ public class BlogController: Controller
             success = true
         });
     }
+
+    [HttpGet]
+    public async Task<IActionResult> BlogList(long id)
+    {
+        BlogListHttpGetViewModel vm = new BlogListHttpGetViewModel()
+        {
+            Blogs = await _blogService.GetAllByUserId(id)
+        };
+
+        return View(vm);
+    }
+    
+    [HttpGet]
+    public async Task<IActionResult> BlogAllList()
+    {
+        BlogListHttpGetViewModel vm = new BlogListHttpGetViewModel()
+        {
+            Blogs = await _blogService.GetAll(),
+            Users = await _userService.GetAll()
+        };
+        
+        return View(vm);
+    }
+
 }

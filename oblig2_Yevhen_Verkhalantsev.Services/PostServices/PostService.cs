@@ -20,7 +20,8 @@ public class PostService: IPostService
         {
             Title = vm.Title,
             Content = vm.Content,
-            CreatedAt = DateTime.Now
+            CreatedAt = DateTime.Now,
+            BlogFk = vm.BlogId
         };
         
         try

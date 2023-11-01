@@ -1,0 +1,26 @@
+@using oblig2_Yevhen_Verkhalantsev.Database
+@using oblig2_Yevhen_Verkhalantsev.Web.Models.Blog
+@model BlogListHttpGetViewModel
+
+<div class="container">
+    <table class="table table-dark table-hover">
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Created At</th>
+            <th>Is Open</th>
+        </tr>
+        
+        @foreach (BlogEntity blog in Model.Blogs)
+        {
+            {
+                <tr id="post-@blog.Id" style="cursor: pointer">
+                    <td>@blog.Id</td>
+                    <td>@blog.Title</td>
+                    <td>@blog.CreatedAt</td>
+                    <td>@blog.IsOpen</td>
+                </tr>
+            }
+        }
+    </table>
+</div>

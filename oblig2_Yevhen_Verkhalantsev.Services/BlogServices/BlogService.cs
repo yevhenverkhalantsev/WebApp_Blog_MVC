@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using oblig2_Yevhen_Verkhalantsev.Database;
 using oblig2_Yevhen_Verkhalantsev.EntityFramework.Repository;
 using oblig2_Yevhen_Verkhalantsev.Services.BlogServices.Models;
@@ -14,12 +15,14 @@ public class BlogService: IBlogService
         _blogRepository = repository;
     }
 
-    public async Task<ResponseService> Create(CreateBlogHttpPostModel vm)
+    public async Task<ResponseService> Create(CreateBlogHttpPostModel vm, long userId)
     {
         BlogEntity blogEntity = new BlogEntity()
         {
             Title = vm.Title,
-            CreatedAt = DateTime.Now
+            CreatedAt = DateTime.Now,
+            UserFk = userId,
+            IsOpen = vm.IsOpen
         };
 
         try
@@ -35,11 +38,11 @@ public class BlogService: IBlogService
         
     }
 
-    public ICollection<BlogEntity> GetAll()
+    public async Task<ICollection<BlogEntity>> GetAll()
     {
-        return _blogRepository.GetAll()
+        return await _blogRepository.GetAll()
             .OrderByDescending(x => x.CreatedAt)
-            .ToList();
+            .ToListAsync();
     }
 
     public async Task<ResponseService<BlogEntity>> GetById(long id)
@@ -52,6 +55,14 @@ public class BlogService: IBlogService
 
         return ResponseService<BlogEntity>.Ok(blog);
     }
-    
-    
+
+    public async Task<ICollection<BlogEntity>> GetAllByUserId(long userId)
+    {
+        var blogs = await _blogRepository.GetAll()
+            .Where(b=>b.UserFk == userId)
+            .OrderByDescending(x => x.CreatedAt)
+            .ToListAsync();
+        
+        return blogs;
+    }
 }

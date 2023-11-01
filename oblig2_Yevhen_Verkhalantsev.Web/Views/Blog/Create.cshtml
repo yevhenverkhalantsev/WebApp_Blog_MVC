@@ -7,6 +7,9 @@
         <div class="bg-secondary rounded h-100 p-4">
             <h6 class="mb-4">Blog Form</h6>
             
+            <!-- Hidden field for user ID -->
+            <input type="hidden" id="userId" value="@(Model?.UserId)">
+            
             <div class="mb-3">
                 <label class="form-label">Title</label>
                 <input type="text" class="form-control" id="blog-name" style="margin-bottom: 10px">
@@ -42,6 +45,7 @@
 
         let requestData = {
             Title: $("#blog-name").val(),
+            UserId: $("#userId").val(),
            
             // IsOpen: $("#isOpen").is(":checked")
             

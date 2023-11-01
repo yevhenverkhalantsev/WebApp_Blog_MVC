@@ -17,4 +17,6 @@ public interface IUserService
     Task<ResponseService<UserEntity>> GetByUsername(string username);
     
     Task<ResponseService<UserEntity>> GetByUsernameAndPassword(string username, string password);
+    
+    Task<ICollection<UserEntity>> GetAll();
 }

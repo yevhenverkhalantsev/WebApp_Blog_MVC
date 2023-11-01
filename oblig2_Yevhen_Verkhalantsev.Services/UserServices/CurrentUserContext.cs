@@ -16,50 +16,76 @@ public class CurrentUserContext: ICurrentUserContext
     {
         get
         {
-            string value = _httpContextAccessor.HttpContext.User.Claims
-                .FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
-
-            if (string.IsNullOrEmpty(value))
+            // Check if _httpContextAccessor or HttpContext is null
+            if (_httpContextAccessor?.HttpContext == null)
             {
-                throw new Exception("Can not get user id");
+                throw new Exception("HttpContext is not available.");
             }
 
-            return long.Parse(value);
-            
+            // Check if User or Claims is null
+            if (_httpContextAccessor.HttpContext.User?.Claims == null)
+            {
+                throw new Exception("User claims are not available.");
+            }
+
+            // Try to get the claim
+            var claim = _httpContextAccessor.HttpContext.User.Claims
+                .FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier);
+
+            // Check if the claim is found and not empty
+            if (claim == null || string.IsNullOrEmpty(claim.Value))
+            {
+                throw new Exception("Can not get user id.");
+            }
+
+            // Parse the value to long
+            if (long.TryParse(claim.Value, out long id))
+            {
+                return id;
+            }
+            else
+            {
+                throw new Exception("User id is not in a valid format.");
+            }
         }
     }
+
 
     public string Username
     {
         get
         {
-            string value = _httpContextAccessor.HttpContext.User.Claims
-                .FirstOrDefault(x => x.Type == ClaimTypes.Name).Value;
+            if (_httpContextAccessor?.HttpContext?.User?.Claims == null)
+            {
+                throw new Exception("HttpContext or User Claims are not available.");
+            }
 
-            if (string.IsNullOrEmpty(value))
+            var claim = _httpContextAccessor.HttpContext.User.Claims
+                .FirstOrDefault(x => x.Type == ClaimTypes.Name);
+
+            if (claim == null || string.IsNullOrEmpty(claim.Value))
             {
                 throw new Exception("Can not get username");
             }
-            return value;
+
+            return claim.Value;
         }
     }
+
 
     public bool IsAuthenticated
     {
         get
         {
-            var isAuthenticated = _httpContextAccessor.HttpContext?.User?.Identity?.IsAuthenticated;
-            if (isAuthenticated.HasValue)
+            // Check if the HttpContext is available
+            if (_httpContextAccessor?.HttpContext == null)
             {
-                if(isAuthenticated == true)
-                {
-                    return true;
-                }
-                
                 return false;
             }
 
-            return false;
+            // Return the authentication status
+            return _httpContextAccessor.HttpContext.User?.Identity?.IsAuthenticated ?? false;
         }
     }
+
 }

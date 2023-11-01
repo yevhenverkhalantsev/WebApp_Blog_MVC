@@ -12,10 +12,10 @@ public class BlogEntity
     public long Id { get; set; }
     public string Title { get; set; }
     public DateTime CreatedAt { get; set; }
+    public bool IsOpen { get; set; }
     
     public long UserFk { get; set; }
     public UserEntity User { get; set; }
     
     public ICollection<PostEntity> Posts { get; set; }
-    
 }

@@ -18,9 +18,29 @@ public class PostController: Controller
     }
     
     [HttpGet]
-    public async Task<IActionResult> Create()
+    public async Task<IActionResult> Create(long id)
     {
-        return View();
+        CreatePostHttpGetViewModel vm = new CreatePostHttpGetViewModel()
+        {
+            Blogs = await _blogService.GetAllByUserId(id)
+        };
+        
+        return View(vm);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] CreatePostHttpPostModel vm)
+    {
+        var response = await _postService.Create(vm);
+        if (response.IsError)
+        {
+            return BadRequest(new
+            {
+                responseMessage = response.ErrorMessage
+            });
+        }
+
+        return Ok(new { success = true });
     }
 
     [HttpGet]
@@ -41,7 +61,7 @@ public class PostController: Controller
         {
             return View(new UpdatePostHttpGetViewModel()
             {
-                Blogs = _blogService.GetAll(),
+                Blogs = await _blogService.GetAll(),
                 ErrorMessage = response.ErrorMessage,
                 IsError = true
             });
@@ -49,7 +69,7 @@ public class PostController: Controller
 
         return View(new UpdatePostHttpGetViewModel()
         {
-            Blogs = _blogService.GetAll(),
+            Blogs = await _blogService.GetAll(),
             IsError = false,
             Post = response.Value
         });

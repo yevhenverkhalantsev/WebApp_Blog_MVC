@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "k011/tGfxLLR3xj29gKYfC4atenBg2LkA3WXQl3+IJA=",
+  "Hash": "evW8vf7Jizedyy70klW7DjNbsDYtrFluEwaxr/4gRPg=",
   "Source": "oblig2_Yevhen_Verkhalantsev.Web",
   "BasePath": "_content/oblig2_Yevhen_Verkhalantsev.Web",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/wwwroot/img/ic_login.png",
+      "SourceId": "oblig2_Yevhen_Verkhalantsev.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/wwwroot/",
+      "BasePath": "_content/oblig2_Yevhen_Verkhalantsev.Web",
+      "RelativePath": "img/ic_login.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/ic_login.png"
     },
     {
       "Identity": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/wwwroot/img/testimonial-1.jpg",

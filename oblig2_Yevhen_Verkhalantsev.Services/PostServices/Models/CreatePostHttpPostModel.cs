@@ -6,8 +6,8 @@ public class CreatePostHttpPostModel
 {
     public string Title { get; set; }
     public string Content { get; set; }
-    public DateTime CreatedAt { get; set; }
     
+    public long BlogId { get; set; }
 }
 
 public class CreatePostHttpPostValidator : AbstractValidator<CreatePostHttpPostModel>
@@ -26,9 +26,8 @@ public class CreatePostHttpPostValidator : AbstractValidator<CreatePostHttpPostM
             .NotEmpty()
             .NotNull();
 
-        RuleFor(x => x.CreatedAt)
-            .NotEmpty()
-            .NotNull();
+        RuleFor(x => x.BlogId)
+            .GreaterThan(0);
 
     }
 }

@@ -1,5 +1,5 @@
 ﻿@using oblig2_Yevhen_Verkhalantsev.Services.UserServices
-@inject ICurrentUserContext currentUserContext
+@inject ICurrentUserContext CurrentUserContext
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,8 +50,20 @@
             Blog
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="@Url.Action("Create", "Blog")">Create blog</a></li>
-            <li><a class="dropdown-item" href="@Url.Action()">Blog List</a></li>
+            
+            <li><a class="dropdown-item" href="@Url.Action("BlogAllList", "Blog")">All blogs</a></li>
+            
+            @if (CurrentUserContext.IsAuthenticated)
+            {
+              <li><a class="dropdown-item" href="@Url.Action("Create", "Blog", new { @id = CurrentUserContext.Id })">Create blog</a></li>
+              <li><a class="dropdown-item" href="@Url.Action("BlogList", "Blog", new { @id = CurrentUserContext.Id })">My Blog List</a></li>
+            }
+            else
+            {
+              <li class="dropdown-item">Please login to create a blog.</li>
+              <li class="dropdown-item">Please login to see the blog list.</li>
+            }
+
           </ul>
         </li>
 
@@ -60,8 +72,18 @@
             Post
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="@Url.Action("Create", "Post")">Create Post</a></li>
-            <li><a class="dropdown-item" href="@Url.Action("PostList", "Post")">Post List</a></li>
+            
+            @if (CurrentUserContext.IsAuthenticated)
+            {
+              <li><a class="dropdown-item" href="@Url.Action("Create", "Post", new { @id = CurrentUserContext.Id })">Create Post</a></li>
+              <li><a class="dropdown-item" href="@Url.Action("PostList", "Post", new { @id = CurrentUserContext.Id })">My Post List</a></li>
+            }
+            else
+            {
+              <li class="dropdown-item">Please login to create a post.</li>
+              <li class="dropdown-item">Please login to see the post list.</li>
+            }
+            
           </ul>
         </li>
 
@@ -70,8 +92,17 @@
             Comment
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="@Url.Action("Create", "Comment")">Create comment</a></li>
-            <li><a class="dropdown-item" href="@Url.Action()">Comment List</a></li>
+            
+            @if (CurrentUserContext.IsAuthenticated)
+            {
+              <li><a class="dropdown-item" href="@Url.Action("Create", "Comment", new { @id = CurrentUserContext.Id })">Create comment</a></li>
+              <li><a class="dropdown-item" href="@Url.Action("CommentList", "Comment", new { @id = CurrentUserContext.Id })">My Comment List</a></li>
+            }
+            else
+            {
+              <li class="dropdown-item">Please login to create a comment.</li>
+              <li class="dropdown-item">Please login to see the comment list.</li>
+            }
           </ul>
         </li>
 
@@ -79,33 +110,35 @@
     </div>
   </div>
   <div class="nav-item dropdown">
-    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-      <img class="rounded-circle me-lg-2" src="~/img/user.jpg" alt="" style="width: 40px; height: 40px;">
-      <span class="d-none d-lg-inline-flex">
-        @if (currentUserContext.IsAuthenticated)
-        {
-          @currentUserContext.Username
-        }
-
-      </span> 
-    </a>
-    @if (currentUserContext.IsAuthenticated)
+    @if (CurrentUserContext.IsAuthenticated)
     {
+      <!-- Display this icon when the user is authenticated -->
+      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+        <img class="rounded-circle me-lg-2" src="~/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+        <span class="d-none d-lg-inline-flex">@CurrentUserContext.Username</span>
+      </a>
       <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-        <a href="#" class="dropdown-item">Log Out</a>
+        <a href="@Url.Action("LogOut", "Auth")" class="dropdown-item" onclick="return confirm('Are you sure you want to log out?');">Log Out</a>
       </div>
     }
     else
     {
+      <!-- Display this icon when the user is not authenticated -->
+      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+        <img class="rounded-circle me-lg-2" src="~/img/ic_login.png" alt="" style="width: 40px; height: 40px;">
+        <span class="d-none d-lg-inline-flex">Guest</span>
+      </a>
       <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
         <a href="@Url.Action("LogIn", "Auth")" class="dropdown-item">Log In</a>
+        <a href="@Url.Action("SignUp", "Auth")" class="dropdown-item">Sign Up</a>
       </div>
     }
- 
-    </div>
+   
+  </div>
 </nav>
 
 <div class="container-fluid position-relative p-0">
+
 
     @RenderBody()
     

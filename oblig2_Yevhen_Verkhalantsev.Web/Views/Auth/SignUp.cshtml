@@ -43,9 +43,16 @@
             dataType: "json",
             contentType: "application/json; charset=utf-8",
             success: (response)=>{
+                if(response.success){
+                    window.location.href = "@Url.Action("Index", "Home")";
+                }
+                else{
+                    alert(response.message);
+                }
                 
             },
             error: (response)=>{
+                alert(response.message);
                 
             }
         
