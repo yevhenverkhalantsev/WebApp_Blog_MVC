@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using oblig2_Yevhen_Verkhalantsev.Services.BlogServices;
 using oblig2_Yevhen_Verkhalantsev.Services.BlogServices.Models;
@@ -10,16 +11,15 @@ namespace oblig2_Yevhen_Verkhalantsev.Web.Controllers;
 public class BlogController: Controller
 {
     private readonly IBlogService _blogService;
-    private readonly IUserService _userService;
 
-    public BlogController(IBlogService blogService, IUserService userService)
+    public BlogController(IBlogService blogService)
     {
         _blogService = blogService;
-        _userService = userService;
     }
 
     
     [HttpGet]
+    [Authorize]
     public async Task<IActionResult> Create()
     {
         return View();
@@ -70,11 +70,35 @@ public class BlogController: Controller
     {
         BlogListHttpGetViewModel vm = new BlogListHttpGetViewModel()
         {
-            Blogs = await _blogService.GetAll(),
-            Users = await _userService.GetAll()
+            Blogs = await _blogService.GetAll()
         };
         
         return View(vm);
     }
 
+    [HttpGet]
+    public async Task<IActionResult> BlogDetails(long id)
+    {
+         var response = await _blogService.GetById(id);
+         if (response.IsError)
+         {
+             return View(new BlogDetailsHttpGetViewModel()
+             {
+                 IsError = true,
+                 ErrorMessage = response.ErrorMessage
+             });
+         }
+         
+         return View(new BlogDetailsHttpGetViewModel()
+         {
+             IsError = false,
+             Blog = response.Value
+         });
+    }
+    
+    [HttpGet]
+    public async Task<IActionResult> MyBlog(long id)
+    {
+        return View();
+    }
 }

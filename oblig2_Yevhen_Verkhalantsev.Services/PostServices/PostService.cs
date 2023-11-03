@@ -64,7 +64,6 @@ public class PostService: IPostService
 
         postEntity.Title = vm.Title;
         postEntity.Content = vm.Content;
-        postEntity.CreatedAt = vm.CreatedAt;
 
         try
         {

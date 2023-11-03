@@ -111,5 +111,27 @@ public class PostController: Controller
             success = true
         });
     }
+    
+    
+    [HttpPost]
+    public async Task<IActionResult> GetById([FromBody] GetByIdPostHttpPostModel vm)
+    {
+        var response = await _postService.GetById(vm.Id);
+        if (response.IsError)
+        {
+            return BadRequest(new
+            {
+                responseMessage = response.ErrorMessage
+            });
+        }
+
+        return Ok(new
+        {
+            success = true,
+            result = response.Value
+        });
+    }
+    
+    
 
 }

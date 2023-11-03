@@ -41,13 +41,16 @@ public class BlogService: IBlogService
     public async Task<ICollection<BlogEntity>> GetAll()
     {
         return await _blogRepository.GetAll()
+            .Include(x=>x.User)
             .OrderByDescending(x => x.CreatedAt)
             .ToListAsync();
     }
 
     public async Task<ResponseService<BlogEntity>> GetById(long id)
     {
-        BlogEntity blog = await _blogRepository.GetById(id);
+        BlogEntity blog = await _blogRepository.GetAll()
+            .Include(x => x.Posts)
+            .FirstOrDefaultAsync(x => x.Id == id);
         if (blog == null)
         {
             return ResponseService<BlogEntity>.Error("No blog with that id");

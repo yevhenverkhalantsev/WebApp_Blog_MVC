@@ -1,4 +1,6 @@
+@using oblig2_Yevhen_Verkhalantsev.Services.UserServices
 @model oblig2_Yevhen_Verkhalantsev.Web.Models.Blog.BlogListHttpGetViewModel
+@inject ICurrentUserContext currentUserContext
 
 <div class="container-fluid pt-4 px-4">
     <div class="bg-secondary text-center rounded p-4">
@@ -18,12 +20,21 @@
                 <tbody>
                     @foreach (var blog in Model.Blogs)
                     {
-                        var author = Model.Users.FirstOrDefault(u => u.Id == blog.UserFk);
+                        
                         <tr>
                             <td>@blog.CreatedAt.ToString("dd MMM yyyy")</td>
-                            <td>@(author?.Username ?? "Unknown")</td>
+                            <td>@blog.User.Username</td>
                             <td>@blog.Title</td>
-                            <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                            <td>
+                                @if (blog.UserFk == currentUserContext.Id)
+                                {
+                                    <a class="btn btn-sm btn-primary" href="@Url.Action("MyBlog","Blog", new {@id = blog.UserFk})">Detail</a>
+                                }
+                                else
+                                {
+                                    <a class="btn btn-sm btn-primary" href="@Url.Action("BlogDetails","Blog", new {@id = blog.Id})">Detail</a>
+                                }
+                            </td>
                         </tr>
                     }
                 </tbody>
