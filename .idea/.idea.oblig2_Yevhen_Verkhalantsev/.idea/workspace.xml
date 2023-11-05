@@ -10,38 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="860ecc27-7829-422c-a7bd-d32fb78f833f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/PostServices/Models/GetByIdPostHttpPostModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db-shm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db-wal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Models/Blog/BlogDetailsHttpGetViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Blog/BlogDetails.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/BlogServices/BlogService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/BlogServices/BlogService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/PostServices/Models/UpdatePostHttpPostModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/PostServices/Models/UpdatePostHttpPostModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/PostServices/PostService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/PostServices/PostService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/refint/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/refint/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/BlogController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/BlogController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/PostController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/PostController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Blog/BlogAllList.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Blog/BlogAllList.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Post/PostList.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Post/PostList.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/refint/oblig2_Yevhen_Verkhalantsev.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/refint/oblig2_Yevhen_Verkhalantsev.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/staticwebassets.pack.sentinel" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,8 +62,7 @@
     <setting file="file://$PROJECT_DIR$/../oblig1_Yevhen_Verkhalantsev/oblig1_Yevhen_Verkhalantsev/Views/Product/ProductsList.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../oblig1_Yevhen_Verkhalantsev/oblig1_Yevhen_Verkhalantsev/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Database/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/PostServices/PostService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -233,7 +217,8 @@
       <workItem from="1698843244543" duration="9760000" />
       <workItem from="1698871378304" duration="9095000" />
       <workItem from="1698943412763" duration="9418000" />
-      <workItem from="1699005612752" duration="14378000" />
+      <workItem from="1699005612752" duration="17271000" />
+      <workItem from="1699205550593" duration="654000" />
     </task>
     <task id="LOCAL−00001" summary="init commit">
       <option name="closed" value="true" />
@@ -270,7 +255,14 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1698880469063</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="update, delete post">
+      <option name="closed" value="true" />
+      <created>1699030148717</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1699030148717</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +287,8 @@
     <MESSAGE value="basic setup ui, services, auth" />
     <MESSAGE value="authentication(login)" />
     <MESSAGE value="all blog list, create post" />
-    <option name="LAST_COMMIT_MESSAGE" value="all blog list, create post" />
+    <MESSAGE value="update, delete post" />
+    <option name="LAST_COMMIT_MESSAGE" value="update, delete post" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -325,19 +318,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/BlogController.cs</url>
-          <line>81</line>
-          <properties documentPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/BlogController.cs" initialLine="81" containingFunctionPresentation="Method 'BlogDetails'">
-            <startOffsets>
-              <option value="2055" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2101" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -6,7 +6,7 @@
             <th>Id</th>
             <th>Title</th>
             <th>Content</th>
-            <th>Blog</th>
+            <th>BlogFk</th>
         </tr>
         
         @foreach (PostEntity post in Model.Posts)
@@ -15,7 +15,7 @@
                 <td>@post.Id</td>
                 <td>@post.Title</td>
                 <td>@post.Content</td>
-                <td>@post.Blog.Title</td>
+                <td>@post.BlogFk</td>
             </tr>
         }
     </table>

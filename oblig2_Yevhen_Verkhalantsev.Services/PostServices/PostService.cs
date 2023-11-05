@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using oblig2_Yevhen_Verkhalantsev.Database;
 using oblig2_Yevhen_Verkhalantsev.EntityFramework.Repository;
 using oblig2_Yevhen_Verkhalantsev.Services.BlogServices.Models;
@@ -45,14 +46,19 @@ public class PostService: IPostService
 
     public async Task<ResponseService<PostEntity>> GetById(long id)
     {
-        PostEntity post = await _postRepository.GetById(id);
+        PostEntity? post = await _postRepository.GetAll()
+            .Include(x => x.Blog)
+            .FirstOrDefaultAsync(x => x.Id == id);
+
         if (post == null)
         {
             return ResponseService<PostEntity>.Error("No post with that id");
         }
-        
+    
         return ResponseService<PostEntity>.Ok(post);
     }
+
+
     
     public async Task<ResponseService> Update(UpdatePostHttpPostModel vm)
     {
