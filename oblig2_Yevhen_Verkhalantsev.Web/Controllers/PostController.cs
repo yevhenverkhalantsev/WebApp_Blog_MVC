@@ -44,11 +44,11 @@ public class PostController: Controller
     }
 
     [HttpGet]
-    public async Task<IActionResult> PostList()
+    public async Task<IActionResult> PostList(long id)
     {
         PostListHttpGetViewModel vm = new PostListHttpGetViewModel()
         {
-            Posts = _postService.GetAll()
+            Posts = _postService.GetAllByUserId(id)
         };
         return View(vm);
     }
@@ -132,6 +132,25 @@ public class PostController: Controller
         });
     }
     
-    
+    [HttpGet]
+    public async Task<IActionResult> GetPostsByBlog(long id)
+    {
+        var response = await _postService.GetPostsByBlog(id);
+        if (response.IsError)
+        {
+            return Ok(new
+            {
+                success = false,
+                result = Enumerable.Empty<CreatePostHttpPostModel>(),
+                responseMessage = response.ErrorMessage
+            });
+        }
+
+        return Ok(new
+        {
+            success = true,
+            result = response.Value
+        });
+    }
 
 }

@@ -8,7 +8,6 @@
 
     <ItemGroup>
       <Folder Include="AuthServices\Models\" />
-      <Folder Include="CommentServices\" />
     </ItemGroup>
 
     <ItemGroup>

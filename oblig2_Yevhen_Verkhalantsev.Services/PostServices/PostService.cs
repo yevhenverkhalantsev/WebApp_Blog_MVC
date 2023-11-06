@@ -43,6 +43,15 @@ public class PostService: IPostService
             .OrderByDescending(x => x.CreatedAt)
             .ToList();
     }
+    
+    public ICollection<PostEntity> GetAllByUserId(long userId)
+    {
+        return _postRepository.GetAll()
+            .Include(x => x.Blog)
+            .Where(x => x.Blog.UserFk == userId) // Assuming the Blog has a UserFk property that relates to the UserId
+            .OrderByDescending(x => x.CreatedAt)
+            .ToList();
+    }
 
     public async Task<ResponseService<PostEntity>> GetById(long id)
     {
@@ -103,5 +112,20 @@ public class PostService: IPostService
 
         return ResponseService.Ok();
     }
+    
+    public async Task<ResponseService<IEnumerable<PostEntity>>> GetPostsByBlog(long blogId)
+    {
+        var posts = await _postRepository.GetAll()
+            .Where(x => x.BlogFk == blogId)
+            .ToListAsync();
+
+        if (!posts.Any())
+        {
+            return ResponseService<IEnumerable<PostEntity>>.Error("No posts for that blog id");
+        }
+
+        return ResponseService<IEnumerable<PostEntity>>.Ok(posts);
+    }
+
     
 }

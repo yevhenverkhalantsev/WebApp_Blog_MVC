@@ -15,7 +15,7 @@
                     @Model.Blog.Title
                 }
                 
-                <input type="button" class="btn btn-outline-dark" value="add post" style="" id="create-new-post-button" data-bs-target="#create-new-post-modal" data-bs-toggle="modal"/>
+                <input type="button" class="btn btn-outline-dark float-end" value="add post" style="" id="create-new-post-button" data-bs-target="#create-new-post-modal" data-bs-toggle="modal"/>
                 <div class="modal fade" id="create-new-post-modal" tabindex="-1" >
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -34,7 +34,7 @@
                                 
                             </div>
                             <div class="modal-footer">
-                                <button id="btnCreate" type="button" style="margin-bottom: 10px" class="btn btn-primary">Create</button>
+                                <button id="btnCreate" type="button" style="margin-bottom: 10px" class="btn btn-success">Create</button>
                                                                             
                                 <div id="create-success-label" class="alert alert-success d-none">
                                     Created successfully!
@@ -71,6 +71,28 @@
                         <p>
                             @postEntity.Content
                         </p>
+                        
+                        <div class="comments-section">
+                            <h6>Comments:</h6>
+                            <div id="comments-container-@postEntity.Id">
+                                @foreach (CommentEntity comment in postEntity.Comments)
+                                {
+                                    <div id="comment-@comment.Id" class="d-flex justify-content-between align-items-center border-bottom mb-2 pb-2">
+                                        <span>@comment.Content</span>
+                                        <div>
+                                            <button class="btn btn-sm btn-outline-secondary" onclick="editComment(@comment.Id)">Edit</button>
+                                            <button class="btn btn-sm btn-outline-danger" onclick="deleteComment(@comment.Id)">Delete</button>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Write a comment..." id="comment-input-@postEntity.Id">
+                                <button class="btn btn-outline-secondary" type="button" onclick="addComment()">Comment</button>
+                            </div>
+                        </div>
+                        
                     </div>
                     <div class="card-footer">
                         <input type="button" class="btn btn-danger" value="Delete" id="remove-post-@postEntity.Id"/>
@@ -98,7 +120,7 @@
                                 
                     </div>
                     <div class="modal-footer">
-                        <button id="btn-save" type="button" style="margin-bottom: 10px" class="btn btn-primary" onclick="savePostData()">Save</button>
+                        <button id="btn-save" type="button" style="margin-bottom: 10px" class="btn btn-success" onclick="savePostData()">Save</button>
                                                                             
                         <div id="edit-success-label" class="alert alert-success d-none">
                             Updated successfully!
@@ -142,36 +164,40 @@
         })
     })
     
-    $("#btnCreate").on('click', ()=>{
-                let data = {
-                    Title: $("#post-title").val(),
-                    Content: $("#post-content").val(),
-                    BlogId: Number(@Model.Blog.Id)
-                }
-                
-                let jsonData = JSON.stringify(data)
-                
+$("#btnCreate").on('click', ()=>{
+    let data = {
+        Title: $("#post-title").val(),
+        Content: $("#post-content").val(),
+        BlogId: Number(@Model.Blog.Id)
+    }
+
+    let jsonData = JSON.stringify(data)
+
+    $("#create-success-label").addClass("d-none")
+    $("#create-error-label").addClass("d-none")
+
+    $.ajax({
+        url:'@Url.Action("Create", "Post")', 
+        method: 'post',
+        data: jsonData,
+        dataType: 'json',
+        contentType: 'application/json; charset=utf-8',
+        success:(response)=>{
+            $("#create-success-label").removeClass("d-none")
+            setTimeout(()=>{
+                let createPostModal = bootstrap.Modal.getInstance(document.getElementById('create-new-post-modal'));
+                createPostModal.hide();
                 $("#create-success-label").addClass("d-none")
-                $("#create-error-label").addClass("d-none")
-                
-                $.ajax({
-                    url:'@Url.Action("Create", "Post")', 
-                    method: 'post',
-                    data: jsonData,
-                    dataType: 'json',
-                    contentType: 'application/json; charset=utf-8',
-                    success:(response)=>{
-                        $("#create-success-label").removeClass("d-none")
-                        setTimeout(()=>{
-                          $("#create-success-label").addClass("d-none")  
-                        }, 3000)
-                        $("#post-title").val("")
-                    },
-                    error:(response)=>{
-                        $("#create-error-label").removeClass("d-none")
-                    }
-                })
-            })
+            }, 3000)
+            $("#post-title").val("")
+            $("#post-content").val("")
+        },
+        error:(response)=>{
+            $("#create-error-label").removeClass("d-none")
+        }
+    })
+})
+
             
             let selectedPostToEditId = -1;
             
@@ -220,6 +246,8 @@
                 success: (response)=>{
                     $("#edit-success-label").removeClass("d-none")
                     setTimeout(()=>{
+                        let editPostModal = bootstrap.Modal.getInstance(document.getElementById('edit-post-modal'));
+                        editPostModal.hide();
                         $("#edit-success-label").addClass("d-none")
                     }, 3000)
                 },

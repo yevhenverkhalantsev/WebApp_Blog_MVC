@@ -8,10 +8,14 @@ public interface IPostService
 {
     Task<ResponseService> Create(CreatePostHttpPostModel vm);
     ICollection<PostEntity> GetAll();
+    
+    ICollection<PostEntity> GetAllByUserId(long userId);
 
     Task<ResponseService<PostEntity>> GetById(long id);
     
     Task<ResponseService> Update(UpdatePostHttpPostModel vm);
     
     Task<ResponseService> Delete(DeletePostHttpPostModel vm);
+    
+    Task<ResponseService<IEnumerable<PostEntity>>> GetPostsByBlog(long id);
 }

@@ -69,6 +69,7 @@
                 setTimeout(()=>{
                   $("#create-success-label").addClass("d-none")
                 }, 3000)
+                $("#blog-name").val("")
             },
             error: (response) => {
                 let jsonResponse = JSON.parse(response.responseText)

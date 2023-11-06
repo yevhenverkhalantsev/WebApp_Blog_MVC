@@ -17,19 +17,17 @@
                 <label class="form-label">Content</label>
                 <input type="text" class="form-control" id="comment-content">
             </div>
-            
+
             <div class="mb-3">
                 <label class="form-label">Blog</label>
-                <select class="form-control" id="blog-name">
+                <select class="form-control" id="blog-name" onchange="loadBlogPosts(this.value)">
                     @if (Model.Blogs.Count > 0)
                     {
                         foreach (BlogEntity blog in Model.Blogs)
                         {
                             if (blog.UserFk == CurrentUserContext.Id)
                             {
-                                <option value="@blog.Id">
-                                    @blog.Title
-                                </option>
+                                <option value="@blog.Id">@blog.Title</option>
                             }
                         }
                     }
@@ -39,6 +37,14 @@
                     }
                 </select>
                 <div class="alert alert-danger d-none" id="blog-name-error-label"></div>
+            </div>
+
+            <div class="mb-3 d-none" id="post-selection">
+                <label class="form-label">Post</label>
+                <select class="form-control" id="post-name">
+                    <!-- Options will be loaded dynamically -->
+                </select>
+                <div class="alert alert-danger d-none" id="post-name-error-label"></div>
             </div>
             
             <button id="btnCreate" type="button" style="margin-bottom: 10px" class="btn btn-primary">Create</button>
@@ -57,35 +63,92 @@
 @section Scripts
 {
     <script>
-        $("#btnCreate").on('click', ()=>{
-            let data = {
-                Content: $("#comment-content").val(),
-                BlogId: $("#blog-name").val()
+        function loadBlogPosts(blogId) {
+            let postSelect = $("#post-name");
+            let postSelectionDiv = $("#post-selection");
+
+            postSelect.empty(); // Clear existing options
+
+            if (!blogId) {
+                postSelect.append(new Option("Select a blog first", ""));
+                postSelectionDiv.addClass("d-none");
+                return;
             }
             
-            let jsonData = JSON.stringify(data)
+            $.ajax({
+                url: '@Url.Action("GetPostsByBlog", "Post")',
+                method: 'GET',
+                data: { id: blogId },
+                success: function(response) {
+                    if (response.success && response.result && response.result.length > 0) {
+                        // Populate dropdown with posts
+                        response.result.forEach(function(post) {
+                            postSelect.append(new Option(post.title, post.id));
+                        });
+                    } else {
+                        // If there are no posts or success is false, show "No posts available" in dropdown
+                        postSelect.append(new Option("No posts available", ""));
+                    }
+                    postSelectionDiv.removeClass("d-none");
+                },
+
+                error: function() {
+                    postSelect.append(new Option("Error loading posts. Please try again.", ""));
+                    postSelectionDiv.removeClass("d-none");
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            let selectedBlog = $("#blog-name").val();
+            if (selectedBlog && selectedBlog !== "") {
+                loadBlogPosts(selectedBlog);
+            }
+        });
+
+        $("#btnCreate").on('click', ()=>{
+            let content = $("#comment-content").val();
+            let postId = $("#post-name").val();
             
-            $("#create-success-label").addClass("d-none")
-            $("#create-error-label").addClass("d-none")
+            if(!postId || postId === "" || $("#post-name option:selected").text() === "No posts available") {
+                $("#post-name-error-label").text("Please select a valid post.").removeClass("d-none");
+                return;
+            }
+
+            let data = {
+                Content: content,
+                UserId: @CurrentUserContext.Id,
+                PostId: postId
+            };
+            
+            let jsonData = JSON.stringify(data);
+            
+            $("#create-success-label").addClass("d-none");
+            $("#create-error-label").addClass("d-none");
             
             $.ajax({
-                url:'@Url.Action("Create", "Comment")', 
-                method: 'comment',
+                url: '@Url.Action("Create", "Comment")',
+                method: 'POST',
                 data: jsonData,
                 dataType: 'json',
                 contentType: 'application/json; charset=utf-8',
-                success:(response)=>{
-                    $("#create-success-label").removeClass("d-none")
-                    setTimeout(()=>{
-                      $("#create-success-label").addClass("d-none")  
-                    }, 3000)
-                    $("#comment-content").val("")
+                success: (response) => {
+                    if(response && response.success) {
+                        $("#create-success-label").removeClass("d-none");
+                        setTimeout(()=>{
+                            $("#create-success-label").addClass("d-none");
+                        }, 3000);
+                        $("#comment-content").val(""); // Reset the input field after successful submission
+                    } else {
+                        // If the response is not successful, display an error message
+                        $("#create-error-label").text(response.error || "An error occurred while creating the comment.").removeClass("d-none");
+                    }
                 },
-                error:(response)=>{
-                    $("#create-error-label").removeClass("d-none")
+                error: (response) => {
+                    // On AJAX error, display an error message
+                    $("#create-error-label").text("Failed to create the comment. Please try again.").removeClass("d-none");
                 }
-            })
-        })
+            });
+        });
     </script>
-
 }

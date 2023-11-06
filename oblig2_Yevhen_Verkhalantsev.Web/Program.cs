@@ -1,9 +1,11 @@
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using oblig2_Yevhen_Verkhalantsev.EntityFramework;
 using oblig2_Yevhen_Verkhalantsev.EntityFramework.Repository;
 using oblig2_Yevhen_Verkhalantsev.Services.AuthServices;
 using oblig2_Yevhen_Verkhalantsev.Services.BlogServices;
+using oblig2_Yevhen_Verkhalantsev.Services.CommentServices;
 using oblig2_Yevhen_Verkhalantsev.Services.PostServices;
 using oblig2_Yevhen_Verkhalantsev.Services.UserServices;
 
@@ -11,6 +13,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddControllers().AddJsonOptions(x =>
+    x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
 
 builder.Services.AddDbContext<ApplicationDbContext>(x => x.UseSqlite("Data Source=559536.db"));
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
@@ -31,6 +36,7 @@ builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<IBlogService, BlogService>();
 builder.Services.AddTransient<IPostService, PostService>();
+builder.Services.AddTransient<ICommentService, CommentService>();
 
 
 var app = builder.Build();
