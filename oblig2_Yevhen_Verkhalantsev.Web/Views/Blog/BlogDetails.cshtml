@@ -1,6 +1,8 @@
 @using oblig2_Yevhen_Verkhalantsev.Web.Models.Blog
 @using oblig2_Yevhen_Verkhalantsev.Database
+@using oblig2_Yevhen_Verkhalantsev.Services.UserServices
 @model BlogDetailsHttpGetViewModel
+@inject ICurrentUserContext CurrentUserContext
 
 <div class="container">
     <div class="card">
@@ -67,31 +69,38 @@
                         </div>
 
                     </div>
+                    
                     <div class="card-body">
                         <p>
                             @postEntity.Content
                         </p>
                         
-                        <div class="comments-section">
-                            <h6>Comments:</h6>
-                            <div id="comments-container-@postEntity.Id">
-                                @foreach (CommentEntity comment in postEntity.Comments)
-                                {
-                                    <div id="comment-@comment.Id" class="d-flex justify-content-between align-items-center border-bottom mb-2 pb-2">
-                                        <span>@comment.Content</span>
-                                        <div>
-                                            <button class="btn btn-sm btn-outline-secondary" onclick="editComment(@comment.Id)">Edit</button>
-                                            <button class="btn btn-sm btn-outline-danger" onclick="deleteComment(@comment.Id)">Delete</button>
-                                        </div>
+                        <br/>
+                        <hr/>
+                        <br/>
+                    <div id="comments-section-@postEntity.Id">
+                        <h6 style="color: black">Comments:</h6>
+                        <div id="comments-container-@postEntity.Id">
+                            @foreach (CommentEntity comment in postEntity.Comments)
+                            {
+                                <div id="comment-@comment.Id" class="d-flex justify-content-between align-items-center border-bottom mb-2 pb-2">
+                                    <span>@comment.Content</span>
+                                    <div>
+                                        <button class="btn btn-sm btn-outline-secondary" onclick="editComment(@comment.Id)" data-bs-target="#edit-comment-modal" data-bs-toggle="modal">Edit</button>
+                                        <button class="btn btn-sm btn-outline-danger" onclick="deleteComment(@comment.Id)">Delete</button>
                                     </div>
-                                }
-                            </div>
+                                </div>
+                            }
                             
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Write a comment..." id="comment-input-@postEntity.Id">
-                                <button class="btn btn-outline-secondary" type="button" onclick="addComment()">Comment</button>
-                            </div>
+                            
+                            
                         </div>
+                        
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Write a comment..." id="comment-input-@postEntity.Id">
+                            <button class="btn btn-outline-secondary" type="button" onclick="addComment(@postEntity.Id)">Comment</button>
+                        </div>
+                    </div>
                         
                     </div>
                     <div class="card-footer">
@@ -102,42 +111,64 @@
                 <br />
             </div>
         }
-        <div class="modal fade" id="edit-post-modal" tabindex="-1" >
+        
+        <div class="modal fade" id="edit-comment-modal" tabindex="-1" >
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header" id="edit-post-modal-header">Edit post: </div>
-                    <div class="modal-body bg-secondary rounded h-100 p-4">
-                                    
-                        <div class="mb-3">
-                            <label class="form-label">Title</label>
-                            <input type="text" class="form-control" id="edit-post-title">
-                        </div>
-                                
-                        <div class="mb-3">
-                            <label class="form-label">Content</label>
-                            <input type="text" class="form-control" id="edit-post-content">
-                        </div>
-                                
+                    <div class="modal-header">
+                        Edit comment
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" id="edit-comment"/>
                     </div>
                     <div class="modal-footer">
-                        <button id="btn-save" type="button" style="margin-bottom: 10px" class="btn btn-success" onclick="savePostData()">Save</button>
-                                                                            
-                        <div id="edit-success-label" class="alert alert-success d-none">
-                            Updated successfully!
-                        </div>
-                        <div id="edit-error-label" class="alert alert-danger d-none">
-                            Error on updated!
-                        </div>
+                        <button id="btn-save-comment" type="button" style="margin-bottom: 10px" class="btn btn-success" onclick="saveCommentData()">Save</button>
+                        <input class="d-none" id="close-edit-comment-button" data-dismiss="modal"/>
                     </div>
                 </div>
             </div>
         </div>
-    }
-</div>
+
+
+
+
+            <div class="modal fade" id="edit-post-modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" id="edit-post-modal-header">Edit post: </div>
+                        <div class="modal-body bg-secondary rounded h-100 p-4">
+
+                            <div class="mb-3">
+                                <label class="form-label">Title</label>
+                                <input type="text" class="form-control" id="edit-post-title">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Content</label>
+                                <input type="text" class="form-control" id="edit-post-content">
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button id="btn-save" type="button" style="margin-bottom: 10px" class="btn btn-success" onclick="savePostData()">Save</button>
+
+                            <div id="edit-success-label" class="alert alert-success d-none">
+                                Updated successfully!
+                            </div>
+                            <div id="edit-error-label" class="alert alert-danger d-none">
+                                Error on updated!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
 
 @section Scripts
 {
     <script>
+    
     let removeButtons = document.querySelectorAll('[id^="remove-post-"]');
     removeButtons.forEach(btn=>{
         btn.addEventListener('click',()=>{
@@ -163,6 +194,83 @@
             })
         })
     })
+    
+    function addComment(postId) {
+        let commentContent = $('#comment-input-' + postId).val()
+        
+        if(commentContent.trim() === '') {
+            alert('Comment cannot be empty');
+            return;
+        }
+    
+        let data = {
+            PostId: postId,
+            Content: commentContent,
+            UserId: Number('@CurrentUserContext.Id')
+        };
+    
+        let jsonData = JSON.stringify(data);
+    
+        $.ajax({
+            url: '@Url.Action("Create", "Comment")',
+            method: 'post',
+            data: jsonData,
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            success: function(response) {
+                
+                $('#comment-input-' + postId).val('');
+                
+                let commentContainer = document.createElement('div')
+                commentContainer.id = 'comment-' + response.result.id;
+                commentContainer.classList.add('d-flex')
+                commentContainer.classList.add('justify-content-between')
+                commentContainer.classList.add('align-items-center')
+                commentContainer.classList.add('border-bottom')
+                commentContainer.classList.add('mb-2')
+                commentContainer.classList.add('pb-2')
+              
+                let commentContent = document.createElement('span')
+                commentContent.innerHTML = response.result.content;
+                
+                let commentButtonsContainer = document.createElement('div')
+                
+                let editCommentButton = document.createElement('button')
+                editCommentButton.classList.add('btn')
+                editCommentButton.classList.add('btn-sm')
+                editCommentButton.classList.add('btn-outline-secondary')
+                editCommentButton.innerHTML = 'Edit'
+                editCommentButton.dataset.bsTarget = '#edit-comment-modal'
+                editCommentButton.dataset.bsToggle = 'modal'
+                
+                let deleteCommentButton = document.createElement('button')
+                deleteCommentButton.classList.add('btn')
+                deleteCommentButton.classList.add('btn-sm')
+                deleteCommentButton.classList.add('btn-outline-danger')
+                deleteCommentButton.innerHTML = 'Delete'
+                
+                commentButtonsContainer.appendChild(editCommentButton)
+                commentButtonsContainer.appendChild(deleteCommentButton)
+                
+                commentContainer.appendChild(commentContent)
+                commentContainer.appendChild(commentButtonsContainer)
+                document.getElementById('comments-container-' + postId).appendChild(commentContainer);
+                
+                editCommentButton.onclick = function() {
+                    editComment(response.result.id);
+                }
+                
+                deleteCommentButton.onclick = function() {
+                    deleteComment(response.result.id);
+                }
+                
+            },
+            error: function() {
+                alert('Error posting comment');
+            }
+        });
+    }
+
     
 $("#btnCreate").on('click', ()=>{
     let data = {
@@ -257,5 +365,75 @@ $("#btnCreate").on('click', ()=>{
             })
         }
     }
+    
+    function deleteComment(commentId){
+        let data = {
+            Id: Number(commentId)
+        }
+       
+        let jsonData = JSON.stringify(data)
+        
+        $.ajax({
+            url: '@Url.Action("Delete", "Comment")',
+            method: 'post',
+            data: jsonData,
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            success: (response)=>{
+                alert("Success")
+            },
+            error: (response)=>{
+                alert("Error")
+            }
+        })
+    }
+    
+    let commentToEditId = -1;
+    
+    function editComment(commentId) {
+        commentToEditId = commentId;
+        
+        let data = {
+            Id: Number(commentId)
+        }
+        
+        $.ajax({
+            url: '@Url.Action("GetCommentById", "Comment")',
+            method: 'GET',
+            data: data,
+            success: (response)=>{
+                $('#edit-comment').val(response.result.content)
+            },
+            error: (response)=>{
+                alert("Error")
+            }
+        })
+    }
+    
+    function saveCommentData() {
+        if (commentToEditId != -1){
+            let data = {
+                Id: commentToEditId,
+                Content: $("#edit-comment").val()
+            }
+            
+            let jsonData = JSON.stringify(data)
+            
+            $.ajax({
+                url: '@Url.Action("Update", "Comment")',
+                method: 'post',
+                data: jsonData,
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
+                success: (response)=>{
+                    document.getElementById('close-edit-comment-button').click();
+                },
+                error: (response)=>{
+                    alert("Error")
+                }
+            })
+        }
+    }
+    
     </script>
 }

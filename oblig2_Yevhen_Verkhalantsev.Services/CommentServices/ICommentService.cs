@@ -6,7 +6,7 @@ namespace oblig2_Yevhen_Verkhalantsev.Services.CommentServices;
 
 public interface ICommentService
 {
-    Task<ResponseService> Create(CreateCommentHttpPostModel vm);
+    Task<ResponseService<CommentEntity>> Create(CreateCommentHttpPostModel vm);
     
     Task<ResponseService> Delete(DeleteCommentHttpPostModel vm);
     

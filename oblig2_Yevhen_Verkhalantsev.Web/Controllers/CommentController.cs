@@ -42,7 +42,7 @@ public class CommentController: Controller
             });
         }
 
-        return Ok(new { success = true });
+        return Ok(new { success = true, result = response.Value});
     }
 
     [HttpGet]
@@ -50,4 +50,50 @@ public class CommentController: Controller
     {
         return View();
     }
+
+    [HttpPost]
+    public async Task<IActionResult> Delete([FromBody]DeleteCommentHttpPostModel vm)
+    {
+        var response = await _commentService.Delete(vm);
+        if (response.IsError)
+        {
+            return BadRequest(new
+            {
+                responseMessage = response.ErrorMessage
+            });
+        }
+        
+        return Ok(new { success = true });
+    }
+    
+    [HttpGet]
+    public async Task<IActionResult> GetCommentById(long id)
+    {
+        var response = await _commentService.GetById(id);
+        if (response.IsError)
+        {
+            return BadRequest(new
+            {
+                responseMessage = response.ErrorMessage
+            });
+        }
+        
+        return Ok(new { success = true, result = response.Value});
+    }
+    
+    [HttpPost]
+    public async Task<IActionResult> Update([FromBody] UpdateCommentHttpPostModel vm)
+    {
+        var response = await _commentService.Update(vm);
+        if (response.IsError)
+        {
+            return BadRequest(new
+            {
+                responseMessage = response.ErrorMessage
+            });
+        }
+        
+        return Ok(new { success = true});
+    }
+    
 }

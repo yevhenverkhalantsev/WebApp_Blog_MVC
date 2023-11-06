@@ -10,39 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="860ecc27-7829-422c-a7bd-d32fb78f833f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/CommentServices/CommentService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/CommentServices/ICommentService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/CommentServices/Models/CreateCommentHttpPostModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/CommentServices/Models/DeleteCommentHttpPostModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/CommentServices/Models/UpdateCommentHttpPostModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db-shm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db-wal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Blog/MyBlog.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.oblig2_Yevhen_Verkhalantsev/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/PostServices/IPostService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/PostServices/IPostService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/PostServices/PostService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/PostServices/PostService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/BlogServices/BlogService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/BlogServices/BlogService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/CommentServices/CommentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/CommentServices/CommentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/CommentServices/ICommentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/CommentServices/ICommentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/CommentServices/Models/CreateCommentHttpPostModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/CommentServices/Models/CreateCommentHttpPostModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/CommentServices/Models/UpdateCommentHttpPostModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/CommentServices/Models/UpdateCommentHttpPostModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/refint/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/refint/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/oblig2_Yevhen_Verkhalantsev.Services.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Services/oblig2_Yevhen_Verkhalantsev.Services.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/559536.db-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/CommentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/CommentController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/PostController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Controllers/PostController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Models/Comment/CreateCommentHttpGetViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Models/Comment/CreateCommentHttpGetViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Blog/BlogDetails.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Blog/BlogDetails.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Blog/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Blog/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Comment/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Comment/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Post/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Post/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Post/PostList.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/Views/Post/PostList.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/oblig2_Yevhen_Verkhalantsev.Web/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Web.pdb" afterDir="false" />
@@ -243,7 +232,10 @@
       <workItem from="1699208211779" duration="1175000" />
       <workItem from="1699209555368" duration="1729000" />
       <workItem from="1699211425822" duration="6506000" />
-      <workItem from="1699224315370" duration="10188000" />
+      <workItem from="1699224315370" duration="12795000" />
+      <workItem from="1699268666688" duration="5379000" />
+      <workItem from="1699274120631" duration="69000" />
+      <workItem from="1699274392413" duration="6213000" />
     </task>
     <task id="LOCAL−00001" summary="init commit">
       <option name="closed" value="true" />
@@ -294,7 +286,14 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1699206609541</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="create comments">
+      <option name="closed" value="true" />
+      <created>1699234839937</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1699234839937</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +320,8 @@
     <MESSAGE value="all blog list, create post" />
     <MESSAGE value="update, delete post" />
     <MESSAGE value="ui for crud in BlogAllList" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui for crud in BlogAllList" />
+    <MESSAGE value="create comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="create comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

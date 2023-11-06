@@ -50,6 +50,7 @@ public class BlogService: IBlogService
     {
         BlogEntity blog = await _blogRepository.GetAll()
             .Include(x => x.Posts)
+            .ThenInclude(x=>x.Comments)
             .FirstOrDefaultAsync(x => x.Id == id);
         if (blog == null)
         {

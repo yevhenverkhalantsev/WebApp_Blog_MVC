@@ -8,13 +8,14 @@ namespace oblig2_Yevhen_Verkhalantsev.Services.CommentServices;
 public class CommentService: ICommentService
 {
     private readonly IGenericRepository<CommentEntity> _commentRepository;
+    
 
     public CommentService(IGenericRepository<CommentEntity> repository)
     {
         _commentRepository = repository;
     }
 
-    public async Task<ResponseService> Create(CreateCommentHttpPostModel vm)
+    public async Task<ResponseService<CommentEntity>> Create(CreateCommentHttpPostModel vm)
     {
         CommentEntity commentEntity = new CommentEntity()
         {
@@ -30,15 +31,31 @@ public class CommentService: ICommentService
         }
         catch (Exception e)
         {
+            return ResponseService<CommentEntity>.Error(e.Message);
+        }
+        
+        return ResponseService<CommentEntity>.Ok(commentEntity);
+    }
+
+    public async Task<ResponseService> Delete(DeleteCommentHttpPostModel vm)
+    {
+        CommentEntity comment = await _commentRepository.GetById(vm.Id);
+        if (comment == null)
+        {
+            return ResponseService.Error("No comment with that id");
+        }
+
+        try
+        {
+            await _commentRepository.Delete(comment);
+
+        }
+        catch (Exception e)
+        {
             return ResponseService.Error(e.Message);
         }
         
         return ResponseService.Ok();
-    }
-
-    public Task<ResponseService> Delete(DeleteCommentHttpPostModel vm)
-    {
-        throw new NotImplementedException();
     }
 
     public Task<ResponseService<IEnumerable<CommentEntity>>> GetCommentsByPost(long id)
@@ -56,13 +73,33 @@ public class CommentService: ICommentService
         throw new NotImplementedException();
     }
 
-    public Task<ResponseService<CommentEntity>> GetById(long id)
+    public async Task<ResponseService<CommentEntity>> GetById(long id)
     {
-        throw new NotImplementedException();
+        CommentEntity comment = await _commentRepository.GetById(id);
+        if (comment == null)
+        {
+            return ResponseService<CommentEntity>.Error("No comment with that id");
+        }
+        return ResponseService<CommentEntity>.Ok(comment);
     }
 
-    public Task<ResponseService> Update(UpdateCommentHttpPostModel vm)
+    public async Task<ResponseService> Update(UpdateCommentHttpPostModel vm)
     {
-        throw new NotImplementedException();
+        CommentEntity comment = await _commentRepository.GetById(vm.Id);
+        if (comment == null)
+        {
+            return ResponseService.Error("No comment with that id");
+        }
+        comment.Content = vm.Content;
+        
+        try
+        {
+            await _commentRepository.Update(comment);
+        }
+        catch (Exception e)
+        {
+            return ResponseService.Error(e.Message);
+        }
+        return ResponseService.Ok();
     }
 }
