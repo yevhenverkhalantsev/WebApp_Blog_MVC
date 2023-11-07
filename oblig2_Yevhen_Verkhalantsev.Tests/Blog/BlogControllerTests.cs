@@ -60,16 +60,27 @@ public class BlogControllerTests
             Title = "Test Blog",
             IsOpen = true
         };
-        _mockBlogService.Setup(service => service.Create(It.IsAny<CreateBlogHttpPostModel>(), It.IsAny<long>()))
+        _mockBlogService.Setup(service => service.Create(blogPost))
             .ReturnsAsync(ResponseService.Ok());
+
+        // Mock the user context to simulate a logged-in user
+        var user = new ClaimsPrincipal(new ClaimsIdentity(new Claim[]
+        {
+            new Claim(ClaimTypes.NameIdentifier, "1"),
+        }));
+        _controller.ControllerContext = new ControllerContext()
+        {
+            HttpContext = new DefaultHttpContext() { User = user }
+        };
 
         // Act
         var result = await _controller.Create(blogPost);
 
         // Assert
-        _mockBlogService.Verify(service => service.Create(It.IsAny<CreateBlogHttpPostModel>(), It.IsAny<long>()), Times.Once);
+        _mockBlogService.Verify(service => service.Create(blogPost), Times.Once);
         Assert.IsType<OkObjectResult>(result);
     }
+
     
     [Fact]
     public async Task BlogList_ReturnsViewWithCorrectModel()

@@ -15,13 +15,13 @@ public class BlogService: IBlogService
         _blogRepository = repository;
     }
 
-    public async Task<ResponseService> Create(CreateBlogHttpPostModel vm, long userId)
+    public async Task<ResponseService> Create(CreateBlogHttpPostModel vm)
     {
         BlogEntity blogEntity = new BlogEntity()
         {
             Title = vm.Title,
             CreatedAt = DateTime.Now,
-            UserFk = userId,
+            UserFk = vm.UserId,
             IsOpen = vm.IsOpen
         };
 

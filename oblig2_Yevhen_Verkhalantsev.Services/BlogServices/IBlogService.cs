@@ -6,7 +6,7 @@ namespace oblig2_Yevhen_Verkhalantsev.Services.BlogServices;
 
 public interface IBlogService
 {
-    Task<ResponseService> Create(CreateBlogHttpPostModel vm, long userId);
+    Task<ResponseService> Create(CreateBlogHttpPostModel vm);
     Task<ICollection<BlogEntity>> GetAll();
 
     Task<ResponseService<BlogEntity>> GetById(long id);

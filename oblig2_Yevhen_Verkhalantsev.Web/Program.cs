@@ -1,6 +1,8 @@
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using oblig2_Yevhen_Verkhalantsev.Database;
 using oblig2_Yevhen_Verkhalantsev.EntityFramework;
 using oblig2_Yevhen_Verkhalantsev.EntityFramework.Repository;
 using oblig2_Yevhen_Verkhalantsev.Services.AuthServices;
@@ -19,6 +21,7 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 
 builder.Services.AddDbContext<ApplicationDbContext>(x => x.UseSqlite("Data Source=559536.db"));
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped<IPasswordHasher<UserEntity>, PasswordHasher<UserEntity>>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(x =>

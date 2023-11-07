@@ -26,14 +26,7 @@
                             <td>@blog.User.Username</td>
                             <td>@blog.Title</td>
                             <td>
-                                @if (blog.UserFk == currentUserContext.Id)
-                                {
-                                    <a class="btn btn-sm btn-primary" href="@Url.Action("MyBlog","Blog", new {@id = blog.UserFk})">Detail</a>
-                                }
-                                else
-                                {
-                                    <a class="btn btn-sm btn-primary" href="@Url.Action("BlogDetails","Blog", new {@id = blog.Id})">Detail</a>
-                                }
+                                <a class="btn btn-sm btn-primary" href="@Url.Action("BlogDetails","Blog", new {@id = blog.Id})">Detail</a>
                             </td>
                         </tr>
                     }

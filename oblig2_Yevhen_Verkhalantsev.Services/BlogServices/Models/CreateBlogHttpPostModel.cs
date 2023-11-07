@@ -4,9 +4,8 @@ using FluentValidation;
 public class CreateBlogHttpPostModel
 {
     public string Title { get; set; }
-    public DateTime CreatedAt { get; set; }
     public bool IsOpen { get; set; }
-    public long UserFk { get; set; }
+    public long UserId { get; set; }
     
 }
 

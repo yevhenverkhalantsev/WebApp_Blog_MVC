@@ -17,37 +17,40 @@
                     @Model.Blog.Title
                 }
                 
-                <input type="button" class="btn btn-outline-dark float-end" value="add post" style="" id="create-new-post-button" data-bs-target="#create-new-post-modal" data-bs-toggle="modal"/>
-                <div class="modal fade" id="create-new-post-modal" tabindex="-1" >
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">Create new post</div>
-                            <div class="modal-body bg-secondary rounded h-100 p-4">
+                @if (CurrentUserContext.IsAuthenticated && Model.Blog.IsOpen)
+                {
+                    <input type="button" class="btn btn-outline-dark float-end" value="add post" style="" id="create-new-post-button" data-bs-target="#create-new-post-modal" data-bs-toggle="modal"/>
+                    <div class="modal fade" id="create-new-post-modal" tabindex="-1" >
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">Create new post</div>
+                                <div class="modal-body bg-secondary rounded h-100 p-4">
                                     
-                                <div class="mb-3">
-                                    <label class="form-label">Title</label>
-                                    <input type="text" class="form-control" id="post-title">
-                                </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Title</label>
+                                        <input type="text" class="form-control" id="post-title">
+                                    </div>
                                 
-                                <div class="mb-3">
-                                    <label class="form-label">Content</label>
-                                    <input type="text" class="form-control" id="post-content">
-                                </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Content</label>
+                                        <input type="text" class="form-control" id="post-content">
+                                    </div>
                                 
-                            </div>
-                            <div class="modal-footer">
-                                <button id="btnCreate" type="button" style="margin-bottom: 10px" class="btn btn-success">Create</button>
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="btnCreate" type="button" style="margin-bottom: 10px" class="btn btn-success">Create</button>
                                                                             
-                                <div id="create-success-label" class="alert alert-success d-none">
-                                    Created successfully!
-                                </div>
-                                <div id="create-error-label" class="alert alert-danger d-none">
-                                    Error on created!
+                                    <div id="create-success-label" class="alert alert-success d-none">
+                                        Created successfully!
+                                    </div>
+                                    <div id="create-error-label" class="alert alert-danger d-none">
+                                        Error on created!
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                }
             </h5>
         </div>
     </div>
@@ -78,35 +81,56 @@
                         <br/>
                         <hr/>
                         <br/>
-                    <div id="comments-section-@postEntity.Id">
-                        <h6 style="color: black">Comments:</h6>
-                        <div id="comments-container-@postEntity.Id">
-                            @foreach (CommentEntity comment in postEntity.Comments)
+                        <div id="comments-section-@postEntity.Id">
+                            
+                            @if (postEntity.Comments.Count > 0)
                             {
-                                <div id="comment-@comment.Id" class="d-flex justify-content-between align-items-center border-bottom mb-2 pb-2">
-                                    <span>@comment.Content</span>
-                                    <div>
-                                        <button class="btn btn-sm btn-outline-secondary" onclick="editComment(@comment.Id)" data-bs-target="#edit-comment-modal" data-bs-toggle="modal">Edit</button>
-                                        <button class="btn btn-sm btn-outline-danger" onclick="deleteComment(@comment.Id)">Delete</button>
+                            <h6 style="color: black">Comments:</h6>
+                            }
+                            <div id="comments-container-@postEntity.Id">
+                                @foreach (CommentEntity comment in postEntity.Comments)
+                                {
+                                    <div id="comment-@comment.Id" class="d-flex justify-content-between align-items-center border-bottom mb-2 pb-2">
+                                        <span>@comment.Content</span>
+                                        <div>
+                                            @if (CurrentUserContext.IsAuthenticated && (comment.UserFk == CurrentUserContext.Id))
+                                            {
+                                                <button class="btn btn-sm btn-outline-secondary" onclick="editComment(@comment.Id)" data-bs-target="#edit-comment-modal" data-bs-toggle="modal">Edit</button>
+
+                                            }
+                                            @if (CurrentUserContext.IsAuthenticated &&
+                                                 (CurrentUserContext.Id == comment.UserFk ||
+                                                  CurrentUserContext.Id == Model.Blog.UserFk))
+                                            {
+                                                <button class="btn btn-sm btn-outline-danger" onclick="deleteComment(@comment.Id)">Delete</button>
+                                            }
+                                        </div>
                                     </div>
+                                }
+
+                            </div>
+
+                            @if (CurrentUserContext.IsAuthenticated && Model.Blog.IsOpen)
+                            {
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Write a comment..." id="comment-input-@postEntity.Id">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="addComment(@postEntity.Id)">Comment</button>
                                 </div>
                             }
-                            
-                            
-                            
+
                         </div>
                         
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Write a comment..." id="comment-input-@postEntity.Id">
-                            <button class="btn btn-outline-secondary" type="button" onclick="addComment(@postEntity.Id)">Comment</button>
+                    </div>
+                    
+                    @if (CurrentUserContext.IsAuthenticated && 
+                         (Model.Blog.UserFk == CurrentUserContext.Id))
+                    {
+                        <div class="card-footer">
+                            <input type="button" class="btn btn-danger" value="Delete" id="remove-post-@postEntity.Id"/>
+                            <input type="button" class="btn btn-warning" value="Edit" id="edit-post-@postEntity.Id" data-bs-target="#edit-post-modal" data-bs-toggle="modal" onclick="getPostById(@postEntity.Id)"/>
                         </div>
-                    </div>
-                        
-                    </div>
-                    <div class="card-footer">
-                        <input type="button" class="btn btn-danger" value="Delete" id="remove-post-@postEntity.Id"/>
-                        <input type="button" class="btn btn-warning" value="Edit" id="edit-post-@postEntity.Id" data-bs-target="#edit-post-modal" data-bs-toggle="modal" onclick="getPostById(@postEntity.Id)"/>
-                    </div>
+                    }
+
                 </div>
                 <br />
             </div>
@@ -206,7 +230,7 @@
         let data = {
             PostId: postId,
             Content: commentContent,
-            UserId: Number('@CurrentUserContext.Id')
+            UserId: Number(@(CurrentUserContext.IsAuthenticated ? CurrentUserContext.Id : -1))
         };
     
         let jsonData = JSON.stringify(data);

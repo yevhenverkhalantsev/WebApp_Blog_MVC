@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using oblig2_Yevhen_Verkhalantsev.Database;
 using oblig2_Yevhen_Verkhalantsev.EntityFramework.Repository;
@@ -10,10 +11,13 @@ public class UserService: IUserService
 {
 
     private readonly IGenericRepository<UserEntity> _userRepository;
+    
+    private readonly IPasswordHasher<UserEntity> _passwordHasher;
 
-    public UserService(IGenericRepository<UserEntity> userRepository)
+    public UserService(IGenericRepository<UserEntity> userRepository, IPasswordHasher<UserEntity> passwordHasher)
     {
         _userRepository = userRepository;
+        _passwordHasher = passwordHasher;
     }
     
     public async Task<ResponseService<long>> Create(CreateUserHttpPostModel vm)
@@ -27,9 +31,11 @@ public class UserService: IUserService
         UserEntity user = new UserEntity
         {
             Username = vm.Username,
-            Password = vm.Password
+            Password = vm.Password,
         };
-
+        
+        user.Password = _passwordHasher.HashPassword(null, user.Password); 
+        
         try
         {
             await _userRepository.Create(user);
@@ -70,13 +76,28 @@ public class UserService: IUserService
 
     public async Task<ResponseService<UserEntity>> GetByUsernameAndPassword(string username, string password)
     {
-        UserEntity user = await _userRepository.GetAll().FirstOrDefaultAsync(x => x.Username == username && x.Password == password);
-        if (user == null)
+   
+        string hashedPassword = _passwordHasher.HashPassword(null, password);
+        
+        ICollection<UserEntity> users = await _userRepository.GetAll()
+            .Where(x => x.Username == username)
+            .ToListAsync();
+        
+        if (users.Count == 0 )
         {
             return ResponseService<UserEntity>.Error("User not found");
         }
 
-        return ResponseService<UserEntity>.Ok(user);
+        foreach (var user in users)
+        {
+            var result = _passwordHasher.VerifyHashedPassword(null, user.Password, password);
+            if (result == PasswordVerificationResult.Success)
+            {
+                return ResponseService<UserEntity>.Ok(user);
+            }
+        }
+
+        return ResponseService<UserEntity>.Error("User not found");
 
     }
     

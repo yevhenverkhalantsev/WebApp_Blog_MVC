@@ -1,4 +1,5 @@
 /Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.deps.json
+/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.runtimeconfig.json
 /Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll
 /Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb
 /Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Database.dll
@@ -14,6 +15,5 @@
 /Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.dll
 /Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/refint/oblig2_Yevhen_Verkhalantsev.Services.dll
 /Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.pdb
-/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.Services.dll
-/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/bin/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.runtimeconfig.json
 /Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/oblig2_Yevhen_Verkhalantsev.Services.genruntimeconfig.cache
+/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/obj/Debug/net6.0/ref/oblig2_Yevhen_Verkhalantsev.Services.dll

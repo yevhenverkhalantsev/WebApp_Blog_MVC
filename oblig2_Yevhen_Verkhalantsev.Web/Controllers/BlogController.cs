@@ -31,14 +31,8 @@ public class BlogController: Controller
         {
             return BadRequest(ModelState);
         }
-        
-        var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        if (!long.TryParse(currentUserId, out long userId))
-        {
-            return BadRequest(new { errorMessage = "Invalid User ID" });
-        }
 
-        var response = await _blogService.Create(vm, userId);
+        var response = await _blogService.Create(vm);
         if (response.IsError)
         {
             return BadRequest(new
