@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
+      <PackageReference Include="Moq" Version="4.20.69" />
+      <PackageReference Include="xunit" Version="2.6.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\oblig2_Yevhen_Verkhalantsev.Database\oblig2_Yevhen_Verkhalantsev.Database.csproj" />
+      <ProjectReference Include="..\oblig2_Yevhen_Verkhalantsev.EntityFramework\oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj" />
+      <ProjectReference Include="..\oblig2_Yevhen_Verkhalantsev.Services\oblig2_Yevhen_Verkhalantsev.Services.csproj" />
+      <ProjectReference Include="..\oblig2_Yevhen_Verkhalantsev.Web\oblig2_Yevhen_Verkhalantsev.Web.csproj" />
+    </ItemGroup>
+
+</Project>

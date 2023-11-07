@@ -1,0 +1,7 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/Users/yevhenverkhalantsev/Library/Caches/JetBrains/Rider2023.2/resharper-host/temp/Rider/vAny/CoverageData/_oblig2_Yevhen_Verkhalantsev.2138872052/Snapshot/snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7cc326c0_002D2f5b_002D472d_002Dbe5a_002D00a7964ee87a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BlogControllerTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::34A0E371-121E-44D2-855D-D3F563421625::net6.0::oblig2_Yevhen_Verkhalantsev.Tests.Blog.BlogControllerTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

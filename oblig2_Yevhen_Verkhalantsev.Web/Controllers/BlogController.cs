@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using oblig2_Yevhen_Verkhalantsev.Services.BlogServices;
 using oblig2_Yevhen_Verkhalantsev.Services.BlogServices.Models;
-using oblig2_Yevhen_Verkhalantsev.Services.UserServices;
 using oblig2_Yevhen_Verkhalantsev.Web.Models.Blog;
 
 namespace oblig2_Yevhen_Verkhalantsev.Web.Controllers;

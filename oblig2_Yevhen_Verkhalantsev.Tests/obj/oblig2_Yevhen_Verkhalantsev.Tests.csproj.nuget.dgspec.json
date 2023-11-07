@@ -1,0 +1,394 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Tests/oblig2_Yevhen_Verkhalantsev.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Database/oblig2_Yevhen_Verkhalantsev.Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Database/oblig2_Yevhen_Verkhalantsev.Database.csproj",
+        "projectName": "oblig2_Yevhen_Verkhalantsev.Database",
+        "projectPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Database/oblig2_Yevhen_Verkhalantsev.Database.csproj",
+        "packagesPath": "/Users/yevhenverkhalantsev/.nuget/packages/",
+        "outputPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Database/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yevhenverkhalantsev/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.69, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.6.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.413/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.EntityFramework/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.EntityFramework/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj",
+        "projectName": "oblig2_Yevhen_Verkhalantsev.EntityFramework",
+        "projectPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.EntityFramework/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj",
+        "packagesPath": "/Users/yevhenverkhalantsev/.nuget/packages/",
+        "outputPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.EntityFramework/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yevhenverkhalantsev/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Database/oblig2_Yevhen_Verkhalantsev.Database.csproj": {
+                "projectPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Database/oblig2_Yevhen_Verkhalantsev.Database.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.69, )"
+            },
+            "SQLitePCLRaw.bundle_e_sqlite3": {
+              "target": "Package",
+              "version": "[2.1.6, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.6.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.413/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/oblig2_Yevhen_Verkhalantsev.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/oblig2_Yevhen_Verkhalantsev.Services.csproj",
+        "projectName": "oblig2_Yevhen_Verkhalantsev.Services",
+        "projectPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/oblig2_Yevhen_Verkhalantsev.Services.csproj",
+        "packagesPath": "/Users/yevhenverkhalantsev/.nuget/packages/",
+        "outputPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yevhenverkhalantsev/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.EntityFramework/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj": {
+                "projectPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.EntityFramework/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.8.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.69, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.6.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.413/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Tests/oblig2_Yevhen_Verkhalantsev.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Tests/oblig2_Yevhen_Verkhalantsev.Tests.csproj",
+        "projectName": "oblig2_Yevhen_Verkhalantsev.Tests",
+        "projectPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Tests/oblig2_Yevhen_Verkhalantsev.Tests.csproj",
+        "packagesPath": "/Users/yevhenverkhalantsev/.nuget/packages/",
+        "outputPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yevhenverkhalantsev/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Database/oblig2_Yevhen_Verkhalantsev.Database.csproj": {
+                "projectPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Database/oblig2_Yevhen_Verkhalantsev.Database.csproj"
+              },
+              "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.EntityFramework/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj": {
+                "projectPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.EntityFramework/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj"
+              },
+              "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/oblig2_Yevhen_Verkhalantsev.Services.csproj": {
+                "projectPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/oblig2_Yevhen_Verkhalantsev.Services.csproj"
+              },
+              "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/oblig2_Yevhen_Verkhalantsev.Web.csproj": {
+                "projectPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/oblig2_Yevhen_Verkhalantsev.Web.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.7.2, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.69, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.6.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.413/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/oblig2_Yevhen_Verkhalantsev.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/oblig2_Yevhen_Verkhalantsev.Web.csproj",
+        "projectName": "oblig2_Yevhen_Verkhalantsev.Web",
+        "projectPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/oblig2_Yevhen_Verkhalantsev.Web.csproj",
+        "packagesPath": "/Users/yevhenverkhalantsev/.nuget/packages/",
+        "outputPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Web/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yevhenverkhalantsev/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.EntityFramework/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj": {
+                "projectPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.EntityFramework/oblig2_Yevhen_Verkhalantsev.EntityFramework.csproj"
+              },
+              "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/oblig2_Yevhen_Verkhalantsev.Services.csproj": {
+                "projectPath": "/Users/yevhenverkhalantsev/RiderProjects/oblig2_Yevhen_Verkhalantsev/oblig2_Yevhen_Verkhalantsev.Services/oblig2_Yevhen_Verkhalantsev.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.69, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.6.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.413/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
